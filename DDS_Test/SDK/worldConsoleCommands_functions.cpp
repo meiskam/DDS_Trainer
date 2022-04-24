@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -110,14 +110,14 @@ void AworldConsoleCommands_C::levelUp(int NumLevel)
 // Function worldConsoleCommands.worldConsoleCommands_C.giveMeExp
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                          expAmount                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float                          ExpAmount                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AworldConsoleCommands_C::giveMeExp(float expAmount)
+void AworldConsoleCommands_C::giveMeExp(float ExpAmount)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function worldConsoleCommands.worldConsoleCommands_C.giveMeExp");
 
 	AworldConsoleCommands_C_giveMeExp_Params params;
-	params.expAmount = expAmount;
+	params.ExpAmount = ExpAmount;
 
 	auto flags = fn->FunctionFlags;
 

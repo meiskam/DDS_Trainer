@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -43,7 +43,7 @@ public:
 	void UserConstructionScript();
 	void ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);
-	void reInitialise();
+	void reinitialise();
 	void checkPlayerAtHome();
 	void retryPlay();
 	void ExecuteUbergraph_noisyNeighbourBP(int EntryPoint);

@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -324,14 +324,14 @@ void AstatisticsManager_C::addRiskEvent(float RiskValue)
 // Function statisticsManager.statisticsManager_C.addExp
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                          expAmount                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float                          ExpAmount                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AstatisticsManager_C::addExp(float expAmount)
+void AstatisticsManager_C::addExp(float ExpAmount)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function statisticsManager.statisticsManager_C.addExp");
 
 	AstatisticsManager_C_addExp_Params params;
-	params.expAmount = expAmount;
+	params.ExpAmount = ExpAmount;
 
 	auto flags = fn->FunctionFlags;
 

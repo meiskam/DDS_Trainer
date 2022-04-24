@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -52,7 +52,7 @@ struct ANewLightBase_C_ShortRadiusChanged_Params
 // Function NewLightBase.NewLightBase_C.UpdateDaytimeCon
 struct ANewLightBase_C_UpdateDaytimeCon_Params
 {
-	class AdayTimeControler_C*                         dayTimeCon;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AdayTimeControler_C*                         DayTimeCon;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function NewLightBase.NewLightBase_C.Switch

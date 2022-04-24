@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <unordered_set>
+#include <format>
 #include <windows.h>
 #include "pch.h"
 #include "ScriptDisassembler.h"
@@ -254,32 +255,41 @@ DWORD WINAPI InjectedThread(HANDLE hModule)
 
 			auto shops = SDK::UObject::FindObjects<SDK::AshopInstance_C>();
 
-			auto additives = std::unordered_set<SDK::FinventoryItemStruct, SDK::FinventoryItemStruct>();
+			auto additives = std::unordered_set<std::wstring>();
 			for (auto shop : shops)
 			{
-				auto inventory = shop->currentInventory;
+				auto inventory = shop->inventoryBase;
 				for (int i = 0; i < inventory.Num(); i++)
 				{
 					auto item = &inventory[i];
-					if (item->Category == SDK::EitemCategories::Drug || item->Category == SDK::EitemCategories::Additives)
-						additives.insert(*item);
+					if (item->Category == SDK::EitemCategories::Drug || item->Category == SDK::EitemCategories::Additives) {
+						auto drug = &item->drugData;
+						const wchar_t* drugName = nullptr;
+
+						if (&drug->MixStringIDs[0] != nullptr)
+							drugName = drug->MixStringIDs[0].c_str();
+
+						if (drugName == nullptr)
+							drugName = drug->DrugName.Get();
+
+						if (drugName == nullptr)
+							drugName = item->Name.Get();
+
+						additives.insert(std::format(L"tox: {:.2f}; str: {:.2f}; mixStr: {:.2f}; addict: {:.2f}; name: {}\n",
+							drug->toxicity,
+							drug->strength,
+							drug->mixStr,
+							drug->addictiveness,
+							drugName == nullptr ? L"[NULL]" : drugName));
+					}
+
 				}
 			}
 
 			wprintf_s(L"\n== ADDITIVES ==\n");
 			for (auto additive : additives)
 			{
-				auto drug = &additive.drugData;
-				const wchar_t* drugName = drug->MixStringIDs[0].c_str();
-
-				if (drugName == nullptr)
-					drugName = drug->DrugName.Get();
-
-				if (drugName == nullptr)
-					drugName = additive.Name.Get();
-
-				wprintf_s(L"tox: %.2f; str: %.2f; mixStr: %.2f; addict: %.2f; ", drug->toxicity, drug->strength, drug->mixStr, drug->addictiveness);
-				wprintf_s(L"name: %ls\n", drugName == nullptr ? L"[NULL]" : drugName);
+				wprintf_s(additive.c_str());
 				//wprintf_s(L"\t=> %p\n", drug);
 			}
 		}

@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -506,6 +506,14 @@ struct UAITask_MoveTo_AIMoveTo_Params
 	class UAITask_MoveTo*                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function AIModule.AITask_RunEQS.RunEQS
+struct UAITask_RunEQS_RunEQS_Params
+{
+	class AAIController*                               Controller;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	class UEnvQuery*                                   QueryTemplate;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	class UAITask_RunEQS*                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function AIModule.BrainComponent.StopLogic
 struct UBrainComponent_StopLogic_Params
 {
@@ -529,12 +537,26 @@ struct UBrainComponent_IsPaused_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function AIModule.AITask_RunEQS.RunEQS
-struct UAITask_RunEQS_RunEQS_Params
+// Function AIModule.BehaviorTreeComponent.SetDynamicSubtree
+struct UBehaviorTreeComponent_SetDynamicSubtree_Params
 {
-	class AAIController*                               Controller;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-	class UEnvQuery*                                   QueryTemplate;                                            // (Parm, ZeroConstructor, IsPlainOldData)
-	class UAITask_RunEQS*                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+	struct FGameplayTag                                InjectTag;                                                // (Parm)
+	class UBehaviorTree*                               BehaviorAsset;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function AIModule.BehaviorTreeComponent.GetTagCooldownEndTime
+struct UBehaviorTreeComponent_GetTagCooldownEndTime_Params
+{
+	struct FGameplayTag                                CooldownTag;                                              // (Parm)
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function AIModule.BehaviorTreeComponent.AddCooldownTagDuration
+struct UBehaviorTreeComponent_AddCooldownTagDuration_Params
+{
+	struct FGameplayTag                                CooldownTag;                                              // (Parm)
+	float                                              CooldownDuration;                                         // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               bAddToExistingDuration;                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function AIModule.BlackboardComponent.SetValueAsVector
@@ -800,28 +822,6 @@ struct UBTDecorator_BlueprintBase_IsDecoratorObserverActive_Params
 struct UBTDecorator_BlueprintBase_IsDecoratorExecutionActive_Params
 {
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function AIModule.BehaviorTreeComponent.SetDynamicSubtree
-struct UBehaviorTreeComponent_SetDynamicSubtree_Params
-{
-	struct FGameplayTag                                InjectTag;                                                // (Parm)
-	class UBehaviorTree*                               BehaviorAsset;                                            // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function AIModule.BehaviorTreeComponent.GetTagCooldownEndTime
-struct UBehaviorTreeComponent_GetTagCooldownEndTime_Params
-{
-	struct FGameplayTag                                CooldownTag;                                              // (Parm)
-	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function AIModule.BehaviorTreeComponent.AddCooldownTagDuration
-struct UBehaviorTreeComponent_AddCooldownTagDuration_Params
-{
-	struct FGameplayTag                                CooldownTag;                                              // (Parm)
-	float                                              CooldownDuration;                                         // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               bAddToExistingDuration;                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function AIModule.BTFunctionLibrary.StopUsingExternalEvent
@@ -1334,6 +1334,58 @@ struct ANavLinkProxy_HasMovingAgents_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function AIModule.PawnAction.GetActionPriority
+struct UPawnAction_GetActionPriority_Params
+{
+	TEnumAsByte<EAIRequestPriority>                    ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function AIModule.PawnAction.Finish
+struct UPawnAction_Finish_Params
+{
+	TEnumAsByte<EPawnActionResult>                     WithResult;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function AIModule.PawnAction.CreateActionInstance
+struct UPawnAction_CreateActionInstance_Params
+{
+	class UObject*                                     WorldContextObject;                                       // (Parm, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      ActionClass;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	class UPawnAction*                                 ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function AIModule.PawnAction_BlueprintBase.ActionTick
+struct UPawnAction_BlueprintBase_ActionTick_Params
+{
+	class APawn*                                       ControlledPawn;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              DeltaSeconds;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function AIModule.PawnAction_BlueprintBase.ActionStart
+struct UPawnAction_BlueprintBase_ActionStart_Params
+{
+	class APawn*                                       ControlledPawn;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function AIModule.PawnAction_BlueprintBase.ActionResume
+struct UPawnAction_BlueprintBase_ActionResume_Params
+{
+	class APawn*                                       ControlledPawn;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function AIModule.PawnAction_BlueprintBase.ActionPause
+struct UPawnAction_BlueprintBase_ActionPause_Params
+{
+	class APawn*                                       ControlledPawn;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function AIModule.PawnAction_BlueprintBase.ActionFinished
+struct UPawnAction_BlueprintBase_ActionFinished_Params
+{
+	class APawn*                                       ControlledPawn;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EPawnActionResult>                     WithResult;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function AIModule.NavLocalGridManager.SetLocalNavigationGridDensity
 struct UNavLocalGridManager_SetLocalNavigationGridDensity_Params
 {
@@ -1406,58 +1458,6 @@ struct UNavLocalGridManager_AddLocalNavigationGridForBox_Params
 	float                                              Height;                                                   // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               bRebuildGrids;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function AIModule.PawnAction.GetActionPriority
-struct UPawnAction_GetActionPriority_Params
-{
-	TEnumAsByte<EAIRequestPriority>                    ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function AIModule.PawnAction.Finish
-struct UPawnAction_Finish_Params
-{
-	TEnumAsByte<EPawnActionResult>                     WithResult;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function AIModule.PawnAction.CreateActionInstance
-struct UPawnAction_CreateActionInstance_Params
-{
-	class UObject*                                     WorldContextObject;                                       // (Parm, ZeroConstructor, IsPlainOldData)
-	class UClass*                                      ActionClass;                                              // (Parm, ZeroConstructor, IsPlainOldData)
-	class UPawnAction*                                 ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function AIModule.PawnAction_BlueprintBase.ActionTick
-struct UPawnAction_BlueprintBase_ActionTick_Params
-{
-	class APawn*                                       ControlledPawn;                                           // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              DeltaSeconds;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function AIModule.PawnAction_BlueprintBase.ActionStart
-struct UPawnAction_BlueprintBase_ActionStart_Params
-{
-	class APawn*                                       ControlledPawn;                                           // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function AIModule.PawnAction_BlueprintBase.ActionResume
-struct UPawnAction_BlueprintBase_ActionResume_Params
-{
-	class APawn*                                       ControlledPawn;                                           // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function AIModule.PawnAction_BlueprintBase.ActionPause
-struct UPawnAction_BlueprintBase_ActionPause_Params
-{
-	class APawn*                                       ControlledPawn;                                           // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function AIModule.PawnAction_BlueprintBase.ActionFinished
-struct UPawnAction_BlueprintBase_ActionFinished_Params
-{
-	class APawn*                                       ControlledPawn;                                           // (Parm, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EPawnActionResult>                     WithResult;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function AIModule.PawnActionsComponent.K2_PushAction

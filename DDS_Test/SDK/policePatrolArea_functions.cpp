@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -44,14 +44,14 @@ void ApolicePatrolArea_C::GetPatrolSpawnChances(float* Timeout, float* ChanceLow
 // Function policePatrolArea.policePatrolArea_C.SpawnPatrol
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class ApolicePatrolPoint_C*    spawnPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class ApolicePatrolPoint_C*    SpawnPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ApolicePatrolArea_C::SpawnPatrol(class ApolicePatrolPoint_C* spawnPoint)
+void ApolicePatrolArea_C::SpawnPatrol(class ApolicePatrolPoint_C* SpawnPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function policePatrolArea.policePatrolArea_C.SpawnPatrol");
 
 	ApolicePatrolArea_C_SpawnPatrol_Params params;
-	params.spawnPoint = spawnPoint;
+	params.SpawnPoint = SpawnPoint;
 
 	auto flags = fn->FunctionFlags;
 
@@ -61,18 +61,18 @@ void ApolicePatrolArea_C::SpawnPatrol(class ApolicePatrolPoint_C* spawnPoint)
 }
 
 
-// Function policePatrolArea.policePatrolArea_C.chooseSpawnPoint
+// Function policePatrolArea.policePatrolArea_C.ChooseSpawnPoint
 // (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ApolicePatrolPoint_C*    OutPoint                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           Succeded                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FName                   FailID                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ApolicePatrolArea_C::chooseSpawnPoint(class ApolicePatrolPoint_C** OutPoint, bool* Succeded, struct FName* FailID)
+void ApolicePatrolArea_C::ChooseSpawnPoint(class ApolicePatrolPoint_C** OutPoint, bool* Succeded, struct FName* FailID)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function policePatrolArea.policePatrolArea_C.chooseSpawnPoint");
+	static auto fn = UObject::FindObject<UFunction>("Function policePatrolArea.policePatrolArea_C.ChooseSpawnPoint");
 
-	ApolicePatrolArea_C_chooseSpawnPoint_Params params;
+	ApolicePatrolArea_C_ChooseSpawnPoint_Params params;
 
 	auto flags = fn->FunctionFlags;
 

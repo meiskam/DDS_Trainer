@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -65,15 +65,6 @@ enum class EDynamicBoxType : uint8_t
 };
 
 
-// Enum UMG.ESlateSizeRule
-enum class ESlateSizeRule : uint8_t
-{
-	ESlateSizeRule__Automatic      = 0,
-	ESlateSizeRule__Fill           = 1,
-	ESlateSizeRule__ESlateSizeRule_MAX = 2
-};
-
-
 // Enum UMG.EUMGSequencePlayMode
 enum class EUMGSequencePlayMode : uint8_t
 {
@@ -81,6 +72,15 @@ enum class EUMGSequencePlayMode : uint8_t
 	EUMGSequencePlayMode__Reverse  = 1,
 	EUMGSequencePlayMode__PingPong = 2,
 	EUMGSequencePlayMode__EUMGSequencePlayMode_MAX = 3
+};
+
+
+// Enum UMG.ESlateSizeRule
+enum class ESlateSizeRule : uint8_t
+{
+	ESlateSizeRule__Automatic      = 0,
+	ESlateSizeRule__Fill           = 1,
+	ESlateSizeRule__ESlateSizeRule_MAX = 2
 };
 
 
@@ -132,15 +132,6 @@ enum class EWidgetBlendMode : uint8_t
 };
 
 
-// Enum UMG.EWidgetTimingPolicy
-enum class EWidgetTimingPolicy : uint8_t
-{
-	EWidgetTimingPolicy__RealTime  = 0,
-	EWidgetTimingPolicy__GameTime  = 1,
-	EWidgetTimingPolicy__EWidgetTimingPolicy_MAX = 2
-};
-
-
 // Enum UMG.EWidgetSpace
 enum class EWidgetSpace : uint8_t
 {
@@ -158,6 +149,15 @@ enum class EWidgetInteractionSource : uint8_t
 	EWidgetInteractionSource__CenterScreen = 2,
 	EWidgetInteractionSource__Custom = 3,
 	EWidgetInteractionSource__EWidgetInteractionSource_MAX = 4
+};
+
+
+// Enum UMG.EWidgetTimingPolicy
+enum class EWidgetTimingPolicy : uint8_t
+{
+	EWidgetTimingPolicy__RealTime  = 0,
+	EWidgetTimingPolicy__GameTime  = 1,
+	EWidgetTimingPolicy__EWidgetTimingPolicy_MAX = 2
 };
 
 

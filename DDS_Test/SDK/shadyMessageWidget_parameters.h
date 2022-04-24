@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -18,7 +18,7 @@ namespace SDK
 struct UshadyMessageWidget_C_Setup_Params
 {
 	struct FText                                       UserName;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm)
-	struct FString                                     msgString;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+	struct FString                                     MsgString;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 	class UTexture2D*                                  userAvatar;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               PlayerMessage;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -55,7 +55,7 @@ public:
 	bool OnDrop(const struct FGeometry& MyGeometry, const struct FPointerEvent& PointerEvent, class UDragDropOperation* Operation);
 	void isListEmpty(bool* Empty);
 	ESlateVisibility GetVisibility_2();
-	void addListItem(const struct FName& ItemID, int SourceIndex, int Quan);
+	void AddListItem(const struct FName& ItemID, int SourceIndex, int Quan);
 	void ClearList(bool PurgeArrays);
 	ESlateVisibility Get_furnitureList_Visibility_1();
 	ESlateVisibility GetVisibility_1();

@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -113,14 +113,14 @@ void AworkStationMixerBase_C::processMix(struct FdrugData* mixProduct, float* mi
 // Function workStationMixerBase.workStationMixerBase_C.showAddPopup
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AinteractiveBaseObject_C* substanceRef                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AinteractiveBaseObject_C* SubstanceRef                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AworkStationMixerBase_C::showAddPopup(class AinteractiveBaseObject_C* substanceRef)
+void AworkStationMixerBase_C::showAddPopup(class AinteractiveBaseObject_C* SubstanceRef)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function workStationMixerBase.workStationMixerBase_C.showAddPopup");
 
 	AworkStationMixerBase_C_showAddPopup_Params params;
-	params.substanceRef = substanceRef;
+	params.SubstanceRef = SubstanceRef;
 
 	auto flags = fn->FunctionFlags;
 

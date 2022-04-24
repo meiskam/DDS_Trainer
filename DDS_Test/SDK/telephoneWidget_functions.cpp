@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -35,16 +35,16 @@ void UtelephoneWidget_C::renderNotifications()
 // Parameters:
 // class AtelephoneBP_C*          phoneRef                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           renderUserMsg                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// int                            userID                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int                            UserID                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UtelephoneWidget_C::renderMessages(class AtelephoneBP_C* phoneRef, bool renderUserMsg, int userID)
+void UtelephoneWidget_C::renderMessages(class AtelephoneBP_C* phoneRef, bool renderUserMsg, int UserID)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function telephoneWidget.telephoneWidget_C.renderMessages");
 
 	UtelephoneWidget_C_renderMessages_Params params;
 	params.phoneRef = phoneRef;
 	params.renderUserMsg = renderUserMsg;
-	params.userID = userID;
+	params.UserID = UserID;
 
 	auto flags = fn->FunctionFlags;
 

@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -68,14 +68,14 @@ void AclientLooksDatabaseBP_C::generateRandomClient(bool male, float ClientLevel
 // struct FclientLooksData        LooksData                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           isMale                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class USkeletalMesh*           MainBody                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// class USkeletalMesh*           head                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// class USkeletalMesh*           Head                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // class USkeletalMesh*           Hair                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // class USkeletalMesh*           Arms                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // class USkeletalMesh*           Glasses                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // class USkeletalMesh*           Hat                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // class UMaterialInstance*       BodyMaterial                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AclientLooksDatabaseBP_C::returnMyBody(const struct FclientLooksData& LooksData, bool isMale, class USkeletalMesh** MainBody, class USkeletalMesh** head, class USkeletalMesh** Hair, class USkeletalMesh** Arms, class USkeletalMesh** Glasses, class USkeletalMesh** Hat, class UMaterialInstance** BodyMaterial)
+void AclientLooksDatabaseBP_C::returnMyBody(const struct FclientLooksData& LooksData, bool isMale, class USkeletalMesh** MainBody, class USkeletalMesh** Head, class USkeletalMesh** Hair, class USkeletalMesh** Arms, class USkeletalMesh** Glasses, class USkeletalMesh** Hat, class UMaterialInstance** BodyMaterial)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function clientLooksDatabaseBP.clientLooksDatabaseBP_C.returnMyBody");
 
@@ -91,8 +91,8 @@ void AclientLooksDatabaseBP_C::returnMyBody(const struct FclientLooksData& Looks
 
 	if (MainBody != nullptr)
 		*MainBody = params.MainBody;
-	if (head != nullptr)
-		*head = params.head;
+	if (Head != nullptr)
+		*Head = params.Head;
 	if (Hair != nullptr)
 		*Hair = params.Hair;
 	if (Arms != nullptr)

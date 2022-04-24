@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -46,7 +46,7 @@ struct AworkStationMixerBase_C_processMix_Params
 // Function workStationMixerBase.workStationMixerBase_C.showAddPopup
 struct AworkStationMixerBase_C_showAddPopup_Params
 {
-	class AinteractiveBaseObject_C*                    substanceRef;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AinteractiveBaseObject_C*                    SubstanceRef;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function workStationMixerBase.workStationMixerBase_C.UserConstructionScript

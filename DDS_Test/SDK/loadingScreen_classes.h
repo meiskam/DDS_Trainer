@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -40,7 +40,7 @@ public:
 
 
 	void setNewTip();
-	void killLoadingScreen(float* DelayTime);
+	void killLoadingScreen(float* delayTime);
 	void Construct();
 	void ExecuteUbergraph_loadingScreen(int EntryPoint);
 };

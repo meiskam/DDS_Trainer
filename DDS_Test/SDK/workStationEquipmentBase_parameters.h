@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -22,7 +22,7 @@ struct AworkStationEquipmentBase_C_RamaExpand_Params
 // Function workStationEquipmentBase.workStationEquipmentBase_C.GetHeldSubstanceID
 struct AworkStationEquipmentBase_C_GetHeldSubstanceID_Params
 {
-	bool                                               FinalProduct;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               finalProduct;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	struct FName                                       OutSubstanceID;                                           // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -82,7 +82,7 @@ struct AworkStationEquipmentBase_C_quantityChanged_Params
 // Function workStationEquipmentBase.workStationEquipmentBase_C.addSubstancePopup
 struct AworkStationEquipmentBase_C_addSubstancePopup_Params
 {
-	class AinteractiveBaseObject_C*                    substanceRef;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AinteractiveBaseObject_C*                    SubstanceRef;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function workStationEquipmentBase.workStationEquipmentBase_C.workFinished
@@ -164,7 +164,7 @@ struct AworkStationEquipmentBase_C_initialSetup_Params
 {
 	struct FappartmentEquipment                        Data;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm)
 	bool                                               Gizmo;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               FromHovered;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               fromHovered;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function workStationEquipmentBase.workStationEquipmentBase_C.verifyCorrectNaming

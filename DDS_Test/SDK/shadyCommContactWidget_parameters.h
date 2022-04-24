@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -39,7 +39,7 @@ struct UshadyCommContactWidget_C_OnMouseButtonDown_Params
 // Function shadyCommContactWidget.shadyCommContactWidget_C.Setup
 struct UshadyCommContactWidget_C_Setup_Params
 {
-	int                                                userID;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int                                                UserID;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               active;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	class UshadyCommInterface_C*                       shadyRef;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 	struct FcontactPersonStruct                        userData;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm)

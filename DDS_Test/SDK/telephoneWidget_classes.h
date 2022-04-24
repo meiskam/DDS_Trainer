@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -57,7 +57,7 @@ public:
 	struct FcontactPersonStruct                        curCallerData;                                            // 0x0318(0x0070) (Edit, BlueprintVisible, DisableEditOnInstance)
 	struct FString                                     curCallTime;                                              // 0x0388(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	class AtelephoneBP_C*                              phoneRef;                                                 // 0x0398(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
-	class AdayTimeControler_C*                         daytimeManager;                                           // 0x03A0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
+	class AdayTimeControler_C*                         DayTimeManager;                                           // 0x03A0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
 	struct FMargin                                     notificationPadding;                                      // 0x03A8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
@@ -68,7 +68,7 @@ public:
 
 
 	void renderNotifications();
-	void renderMessages(class AtelephoneBP_C* phoneRef, bool renderUserMsg, int userID);
+	void renderMessages(class AtelephoneBP_C* phoneRef, bool renderUserMsg, int UserID);
 	void renderCallList(class AtelephoneBP_C* phoneRef);
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 	void slideNext();

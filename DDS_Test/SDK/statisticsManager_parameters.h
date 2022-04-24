@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -108,7 +108,7 @@ struct AstatisticsManager_C_addRiskEvent_Params
 // Function statisticsManager.statisticsManager_C.addExp
 struct AstatisticsManager_C_addExp_Params
 {
-	float                                              expAmount;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              ExpAmount;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function statisticsManager.statisticsManager_C.calcExpForLevelUp

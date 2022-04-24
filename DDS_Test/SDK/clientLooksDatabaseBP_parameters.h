@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -35,7 +35,7 @@ struct AclientLooksDatabaseBP_C_returnMyBody_Params
 	struct FclientLooksData                            LooksData;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               isMale;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	class USkeletalMesh*                               MainBody;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	class USkeletalMesh*                               head;                                                     // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	class USkeletalMesh*                               Head;                                                     // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	class USkeletalMesh*                               Hair;                                                     // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	class USkeletalMesh*                               Arms;                                                     // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	class USkeletalMesh*                               Glasses;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)

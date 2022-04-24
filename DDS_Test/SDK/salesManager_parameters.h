@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -44,7 +44,7 @@ struct AsalesManager_C_AddDealerExp_Params
 {
 	int                                                ClientId;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	int                                                SaleQuantity;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	float                                              expAmount;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              ExpAmount;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function salesManager.salesManager_C.GetClientMeta
@@ -123,7 +123,7 @@ struct AsalesManager_C_adaptDifficulty_Params
 // Function salesManager.salesManager_C.generateClientMessage
 struct AsalesManager_C_generateClientMessage_Params
 {
-	bool                                               dealer;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Dealer;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               CashMeet;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	int                                                Quantity;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	struct FText                                       DrugNam;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -216,14 +216,14 @@ struct AsalesManager_C_dealerOfferChance_Params
 // Function salesManager.salesManager_C.odMessageResponse
 struct AsalesManager_C_odMessageResponse_Params
 {
-	bool                                               dealer;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Dealer;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	int                                                ClientId;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function salesManager.salesManager_C.showODPopup
 struct AsalesManager_C_showODPopup_Params
 {
-	bool                                               dealer;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Dealer;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	int                                                ClientId;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -291,7 +291,7 @@ struct AsalesManager_C_calcOrderQuantity_Params
 	bool                                               nightTime;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               priceHigh;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	int                                                DrugID;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	int                                                OutQuantity;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	int                                                outQuantity;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	bool                                               Critical;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -377,7 +377,7 @@ struct AsalesManager_C_DealerLeveledUp_Params
 // Function salesManager.salesManager_C.AllDealersAddExp
 struct AsalesManager_C_AllDealersAddExp_Params
 {
-	float                                              expAmount;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              ExpAmount;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function salesManager.salesManager_C.DealerGotArrested

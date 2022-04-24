@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -41,9 +41,9 @@ struct AorderInstance_C_calcPackagingPattern_Params
 	int                                                Index;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	int                                                leftToDivide;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	struct FText                                       PackageName;                                              // (Parm, OutParm)
-	int                                                PackageQuantity;                                          // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	float                                              PackageSize;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	float                                              PackageWeight;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	int                                                packageQuantity;                                          // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              packageSize;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              packageWeight;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	int                                                restLeft;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	int                                                gramsPerPack;                                             // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	class UTexture2D*                                  packageIcon;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -55,7 +55,7 @@ struct AorderInstance_C_generatePackageContents_Params
 {
 	TArray<struct FinventoryItemStruct>                OutInventory;                                             // (Parm, OutParm, ZeroConstructor)
 	TArray<struct FName>                               OutIDs;                                                   // (Parm, OutParm, ZeroConstructor)
-	TArray<int>                                        OutQuantity;                                              // (Parm, OutParm, ZeroConstructor)
+	TArray<int>                                        outQuantity;                                              // (Parm, OutParm, ZeroConstructor)
 	TArray<int>                                        OutAmounts;                                               // (Parm, OutParm, ZeroConstructor)
 	TArray<struct FMixProportionsStruct>               OutMixProportions;                                        // (Parm, OutParm, ZeroConstructor)
 };
@@ -109,7 +109,7 @@ struct AorderInstance_C_SetupOrder_Params
 {
 	TArray<struct FdrugData>                           drugData;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 	TArray<struct FName>                               DrugIDs;                                                  // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-	TArray<int>                                        DrugQuantities;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+	TArray<int>                                        drugQuantities;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 	int                                                ID;                                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	float                                              spawnTime;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };

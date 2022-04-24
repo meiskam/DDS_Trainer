@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -19,7 +19,7 @@ struct UdialogueResponseWidget_C_Setup_Params
 {
 	struct FText                                       DialogueText;                                             // (BlueprintVisible, BlueprintReadOnly, Parm)
 	int                                                responseID;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	class UdialogueWidget_C*                           parentRef;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UdialogueWidget_C*                           ParentRef;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 	struct FdialogueResponseData                       responseData;                                             // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 

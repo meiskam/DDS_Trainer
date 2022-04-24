@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -37,21 +37,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class NavigationSystem.NavigationData");
-		return ptr;
-	}
-
-};
-
-
-// Class NavigationSystem.AbstractNavData
-// 0x0000 (0x04E8 - 0x04E8)
-class AAbstractNavData : public ANavigationData
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class NavigationSystem.AbstractNavData");
 		return ptr;
 	}
 
@@ -634,17 +619,15 @@ public:
 };
 
 
-// Class NavigationSystem.NavMeshBoundsVolume
-// 0x0008 (0x0368 - 0x0360)
-class ANavMeshBoundsVolume : public AVolume
+// Class NavigationSystem.AbstractNavData
+// 0x0000 (0x04E8 - 0x04E8)
+class AAbstractNavData : public ANavigationData
 {
 public:
-	struct FNavAgentSelector                           SupportedAgents;                                          // 0x0360(0x0004) (Edit)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0364(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class NavigationSystem.NavMeshBoundsVolume");
+		static auto ptr = UObject::FindClass("Class NavigationSystem.AbstractNavData");
 		return ptr;
 	}
 
@@ -707,15 +690,17 @@ public:
 };
 
 
-// Class NavigationSystem.NavNodeInterface
-// 0x0000 (0x0028 - 0x0028)
-class UNavNodeInterface : public UInterface
+// Class NavigationSystem.NavMeshBoundsVolume
+// 0x0008 (0x0368 - 0x0360)
+class ANavMeshBoundsVolume : public AVolume
 {
 public:
+	struct FNavAgentSelector                           SupportedAgents;                                          // 0x0360(0x0004) (Edit)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0364(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class NavigationSystem.NavNodeInterface");
+		static auto ptr = UObject::FindClass("Class NavigationSystem.NavMeshBoundsVolume");
 		return ptr;
 	}
 
@@ -858,6 +843,21 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class NavigationSystem.RecastNavMeshDataChunk");
+		return ptr;
+	}
+
+};
+
+
+// Class NavigationSystem.NavNodeInterface
+// 0x0000 (0x0028 - 0x0028)
+class UNavNodeInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class NavigationSystem.NavNodeInterface");
 		return ptr;
 	}
 

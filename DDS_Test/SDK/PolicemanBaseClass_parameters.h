@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -34,7 +34,7 @@ struct APolicemanBaseClass_C_checkCanSpotPlayer_Params
 // Function PolicemanBaseClass.PolicemanBaseClass_C.checkBallenaProtection
 struct APolicemanBaseClass_C_checkBallenaProtection_Params
 {
-	bool                                               protectedBy;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               Protected;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function PolicemanBaseClass.PolicemanBaseClass_C.checkPlayerRunning
@@ -194,8 +194,8 @@ struct APolicemanBaseClass_C_walkSpeedCheck_Params
 {
 };
 
-// Function PolicemanBaseClass.PolicemanBaseClass_C.removeMe
-struct APolicemanBaseClass_C_removeMe_Params
+// Function PolicemanBaseClass.PolicemanBaseClass_C.RemoveMe
+struct APolicemanBaseClass_C_RemoveMe_Params
 {
 };
 

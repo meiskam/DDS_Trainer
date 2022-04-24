@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -101,16 +101,16 @@ void UfurnitureDropQuantityWidget_C::BndEvt__btnCancel_K2Node_ComponentBoundEven
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FString                 targetString                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
-// int                            quanMax                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int                            QuanMax                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UAppManageList_C*        ManageList                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UfurnitureDropQuantityWidget_C::Setup(const struct FString& targetString, int quanMax, class UAppManageList_C* ManageList)
+void UfurnitureDropQuantityWidget_C::Setup(const struct FString& targetString, int QuanMax, class UAppManageList_C* ManageList)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function furnitureDropQuantityWidget.furnitureDropQuantityWidget_C.Setup");
 
 	UfurnitureDropQuantityWidget_C_Setup_Params params;
 	params.targetString = targetString;
-	params.quanMax = quanMax;
+	params.QuanMax = QuanMax;
 	params.ManageList = ManageList;
 
 	auto flags = fn->FunctionFlags;

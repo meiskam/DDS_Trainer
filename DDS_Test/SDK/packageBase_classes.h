@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -20,7 +20,7 @@ public:
 	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0428(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
 	class URamaSaveComponent*                          RamaSave_1;                                               // 0x0430(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	class UWidgetComponent*                            Widget;                                                   // 0x0438(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	TArray<struct FinventoryItemStruct>                Contents;                                                 // 0x0440(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FinventoryItemStruct>                contents;                                                 // 0x0440(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	TArray<int>                                        Quantities;                                               // 0x0450(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	struct FSlateColor                                 colorText;                                                // 0x0460(0x0028) (Edit, BlueprintVisible, DisableEditOnInstance)
 	bool                                               AllAdded;                                                 // 0x0488(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
@@ -38,7 +38,7 @@ public:
 	void UserConstructionScript();
 	void ReceiveBeginPlay();
 	void takeContents();
-	void Setup(TArray<struct FinventoryItemStruct> Contents, TArray<int> Quantities, float TotalSize, float TotalWeight);
+	void Setup(TArray<struct FinventoryItemStruct> contents, TArray<int> Quantities, float TotalSize, float TotalWeight);
 	void ExecuteUbergraph_packageBase(int EntryPoint);
 };
 

@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -57,16 +57,16 @@ void APoliceBlockadeManager_C::GetSpawnChance(float* SpawnChance)
 }
 
 
-// Function PoliceBlockadeManager.PoliceBlockadeManager_C.chooseSpawnPoint
+// Function PoliceBlockadeManager.PoliceBlockadeManager_C.ChooseSpawnPoint
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class APoliceBlockadeArea_C*   OutArea                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void APoliceBlockadeManager_C::chooseSpawnPoint(class APoliceBlockadeArea_C** OutArea)
+void APoliceBlockadeManager_C::ChooseSpawnPoint(class APoliceBlockadeArea_C** OutArea)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PoliceBlockadeManager.PoliceBlockadeManager_C.chooseSpawnPoint");
+	static auto fn = UObject::FindObject<UFunction>("Function PoliceBlockadeManager.PoliceBlockadeManager_C.ChooseSpawnPoint");
 
-	APoliceBlockadeManager_C_chooseSpawnPoint_Params params;
+	APoliceBlockadeManager_C_ChooseSpawnPoint_Params params;
 
 	auto flags = fn->FunctionFlags;
 

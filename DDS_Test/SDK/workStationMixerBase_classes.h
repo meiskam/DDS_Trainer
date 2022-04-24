@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -36,7 +36,7 @@ public:
 	void calcByStrengthening(float Value, float differenceMultiplier, float Strengthening, float* Result);
 	void calcPrecision(float paramIn, float* paramOut);
 	void processMix(struct FdrugData* mixProduct, float* mixProductAmount, struct FMixProportionsStruct* OutMixProportions);
-	void showAddPopup(class AinteractiveBaseObject_C* substanceRef);
+	void showAddPopup(class AinteractiveBaseObject_C* SubstanceRef);
 	void UserConstructionScript();
 	void applyMix();
 	void workFinished();

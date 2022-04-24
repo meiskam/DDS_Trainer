@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -31,7 +31,7 @@ public:
 	bool                                               InInfluenceRadius;                                        // 0x0381(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x6];                                       // 0x0382(0x0006) MISSED OFFSET
 	class APM_PatrolLead_C*                            CurPatrolLead;                                            // 0x0388(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
-	float                                              spawnTimer;                                               // 0x0390(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              SpawnTimer;                                               // 0x0390(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -41,8 +41,8 @@ public:
 
 
 	void GetPatrolSpawnChances(float* Timeout, float* ChanceLow, float* ChanceHigh);
-	void SpawnPatrol(class ApolicePatrolPoint_C* spawnPoint);
-	void chooseSpawnPoint(class ApolicePatrolPoint_C** OutPoint, bool* Succeded, struct FName* FailID);
+	void SpawnPatrol(class ApolicePatrolPoint_C* SpawnPoint);
+	void ChooseSpawnPoint(class ApolicePatrolPoint_C** OutPoint, bool* Succeded, struct FName* FailID);
 	void getUnreachedPoint(class ApolicePatrolPoint_C** Patrol_Point);
 	void UserConstructionScript();
 	void ShortRadiusChanged(bool InRadius);

@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -20,9 +20,9 @@ namespace SDK
 // float                          Price                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Quantity                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class UEquipmentShopInterfaceWidget_C* parentRef                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UEquipmentShopInterfaceWidget_C* ParentRef                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UcheckOutListItemWidget_C::Setup(const struct FName& NewParam, float Price, int Quantity, int Index, class UEquipmentShopInterfaceWidget_C* parentRef)
+void UcheckOutListItemWidget_C::Setup(const struct FName& NewParam, float Price, int Quantity, int Index, class UEquipmentShopInterfaceWidget_C* ParentRef)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function checkOutListItemWidget.checkOutListItemWidget_C.Setup");
 
@@ -31,7 +31,7 @@ void UcheckOutListItemWidget_C::Setup(const struct FName& NewParam, float Price,
 	params.Price = Price;
 	params.Quantity = Quantity;
 	params.Index = Index;
-	params.parentRef = parentRef;
+	params.ParentRef = ParentRef;
 
 	auto flags = fn->FunctionFlags;
 

@@ -2,7 +2,7 @@
 #include "pch.h"
 #include <Windows.h>
 
-// Name: DDS, Version: 1.0.8
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,12 +17,11 @@ FUObjectArray* UObject::GObjects = nullptr;
 //---------------------------------------------------------------------------
 uintptr_t InitSdk(const std::string& moduleName, const size_t gObjectsOffset, const size_t gNamesOffset)
 {
-	uintptr_t mBaseAddress = reinterpret_cast<uintptr_t>(GetModuleHandleA(moduleName.c_str()));
+	auto mBaseAddress = reinterpret_cast<uintptr_t>(GetModuleHandleA(moduleName.c_str()));
 
-	//uintptr_t* firstChunk = reinterpret_cast<uintptr_t*>(mBaseAddress + gObjectsOffset);
-	//UObject::GObjects = reinterpret_cast<SDK::FUObjectArray*>(*firstChunk);
-	UObject::GObjects = reinterpret_cast<FUObjectArray*>(mBaseAddress + gObjectsOffset);
-	FName::GNames = reinterpret_cast<TNameEntryArray*>(mBaseAddress + gNamesOffset);
+	UObject::GObjects = reinterpret_cast<SDK::FUObjectArray*>(mBaseAddress + gObjectsOffset);
+	FName::GNames = reinterpret_cast<SDK::TNameEntryArray*>(mBaseAddress + gNamesOffset);
+
 	return mBaseAddress;
 }
 //---------------------------------------------------------------------------

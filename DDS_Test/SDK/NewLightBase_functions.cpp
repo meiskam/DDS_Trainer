@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -134,14 +134,14 @@ void ANewLightBase_C::ShortRadiusChanged(bool InRadius)
 // Function NewLightBase.NewLightBase_C.UpdateDaytimeCon
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AdayTimeControler_C*     dayTimeCon                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AdayTimeControler_C*     DayTimeCon                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ANewLightBase_C::UpdateDaytimeCon(class AdayTimeControler_C* dayTimeCon)
+void ANewLightBase_C::UpdateDaytimeCon(class AdayTimeControler_C* DayTimeCon)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NewLightBase.NewLightBase_C.UpdateDaytimeCon");
 
 	ANewLightBase_C_UpdateDaytimeCon_Params params;
-	params.dayTimeCon = dayTimeCon;
+	params.DayTimeCon = DayTimeCon;
 
 	auto flags = fn->FunctionFlags;
 

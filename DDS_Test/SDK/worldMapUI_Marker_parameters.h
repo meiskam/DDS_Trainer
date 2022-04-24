@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,7 +17,7 @@ namespace SDK
 // Function worldMapUI_Marker.worldMapUI_Marker_C.checkAreaUnlocked
 struct UworldMapUI_Marker_C_checkAreaUnlocked_Params
 {
-	bool                                               unlocked;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               Unlocked;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function worldMapUI_Marker.worldMapUI_Marker_C.OnMouseButtonDoubleClick
@@ -60,7 +60,7 @@ struct UworldMapUI_Marker_C_Setup_Params
 	TEnumAsByte<EmapMarkerCategories>                  MarkerType;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector2D                                   basePos;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	struct FText                                       ToolTip;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm)
-	bool                                               dealer;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Dealer;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	struct FString                                     AreaString;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 };
 

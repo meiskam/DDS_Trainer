@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -67,14 +67,14 @@ void AnoisyNeighbourBP_C::ReceiveTick(float DeltaSeconds)
 }
 
 
-// Function noisyNeighbourBP.noisyNeighbourBP_C.reInitialise
+// Function noisyNeighbourBP.noisyNeighbourBP_C.reinitialise
 // (BlueprintCallable, BlueprintEvent)
 
-void AnoisyNeighbourBP_C::reInitialise()
+void AnoisyNeighbourBP_C::reinitialise()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function noisyNeighbourBP.noisyNeighbourBP_C.reInitialise");
+	static auto fn = UObject::FindObject<UFunction>("Function noisyNeighbourBP.noisyNeighbourBP_C.reinitialise");
 
-	AnoisyNeighbourBP_C_reInitialise_Params params;
+	AnoisyNeighbourBP_C_reinitialise_Params params;
 
 	auto flags = fn->FunctionFlags;
 

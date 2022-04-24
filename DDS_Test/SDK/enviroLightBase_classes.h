@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -50,7 +50,7 @@ public:
 	void openOutLightRange();
 	void retryGather();
 	void ShortRadiusChanged(bool InRadius);
-	void ToggleShadows(bool on);
+	void ToggleShadows(bool On);
 	void ExecuteUbergraph_enviroLightBase(int EntryPoint);
 };
 

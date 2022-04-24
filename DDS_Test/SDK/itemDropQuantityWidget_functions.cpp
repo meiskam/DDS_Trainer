@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -101,17 +101,17 @@ void UitemDropQuantityWidget_C::BndEvt__btnCancel_K2Node_ComponentBoundEvent_0_O
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FString                 targetString                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
-// int                            quanMax                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int                            QuanMax                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UUserWidget*             TargetWidget                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class UinventoryItemWidget_C*  Payload                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UitemDropQuantityWidget_C::Setup(const struct FString& targetString, int quanMax, class UUserWidget* TargetWidget, class UinventoryItemWidget_C* Payload)
+void UitemDropQuantityWidget_C::Setup(const struct FString& targetString, int QuanMax, class UUserWidget* TargetWidget, class UinventoryItemWidget_C* Payload)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function itemDropQuantityWidget.itemDropQuantityWidget_C.Setup");
 
 	UitemDropQuantityWidget_C_Setup_Params params;
 	params.targetString = targetString;
-	params.quanMax = quanMax;
+	params.QuanMax = QuanMax;
 	params.TargetWidget = TargetWidget;
 	params.Payload = Payload;
 

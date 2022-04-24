@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -190,10 +190,10 @@ void AgangManager_C::checkOrderDrop(bool* OrderOK)
 // bool                           SkipMessage                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            ExpectedDrugID                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          ExpectedDrugMinQuality         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// int                            PackageSizes                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// int                            PackageQuantity                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int                            packageSizes                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int                            packageQuantity                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AgangManager_C::sendGangOrder(bool SkipMessage, int ExpectedDrugID, float ExpectedDrugMinQuality, int PackageSizes, int PackageQuantity)
+void AgangManager_C::sendGangOrder(bool SkipMessage, int ExpectedDrugID, float ExpectedDrugMinQuality, int packageSizes, int packageQuantity)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function gangManager.gangManager_C.sendGangOrder");
 
@@ -201,8 +201,8 @@ void AgangManager_C::sendGangOrder(bool SkipMessage, int ExpectedDrugID, float E
 	params.SkipMessage = SkipMessage;
 	params.ExpectedDrugID = ExpectedDrugID;
 	params.ExpectedDrugMinQuality = ExpectedDrugMinQuality;
-	params.PackageSizes = PackageSizes;
-	params.PackageQuantity = PackageQuantity;
+	params.packageSizes = packageSizes;
+	params.packageQuantity = packageQuantity;
 
 	auto flags = fn->FunctionFlags;
 

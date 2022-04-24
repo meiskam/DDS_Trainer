@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -79,7 +79,7 @@ void APolicemanBaseClass_C::checkCanSpotPlayer(bool* canSpot)
 // Parameters:
 // bool                           protected                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void APolicemanBaseClass_C::checkBallenaProtection(bool* protectedBy)
+void APolicemanBaseClass_C::checkBallenaProtection(bool* Protected)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PolicemanBaseClass.PolicemanBaseClass_C.checkBallenaProtection");
 
@@ -91,8 +91,8 @@ void APolicemanBaseClass_C::checkBallenaProtection(bool* protectedBy)
 
 	fn->FunctionFlags = flags;
 
-	if (protectedBy != nullptr)
-		*protectedBy = params.protectedBy;
+	if (Protected != nullptr)
+		*Protected = params.Protected;
 }
 
 
@@ -615,14 +615,14 @@ void APolicemanBaseClass_C::walkSpeedCheck()
 }
 
 
-// Function PolicemanBaseClass.PolicemanBaseClass_C.removeMe
+// Function PolicemanBaseClass.PolicemanBaseClass_C.RemoveMe
 // (BlueprintCallable, BlueprintEvent)
 
-void APolicemanBaseClass_C::removeMe()
+void APolicemanBaseClass_C::RemoveMe()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PolicemanBaseClass.PolicemanBaseClass_C.removeMe");
+	static auto fn = UObject::FindObject<UFunction>("Function PolicemanBaseClass.PolicemanBaseClass_C.RemoveMe");
 
-	APolicemanBaseClass_C_removeMe_Params params;
+	APolicemanBaseClass_C_RemoveMe_Params params;
 
 	auto flags = fn->FunctionFlags;
 

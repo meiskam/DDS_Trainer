@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -108,15 +108,15 @@ void UworkStationSubstanceAddWidget_C::Construct()
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AinteractiveBaseObject_C* SelectedSubstance              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class AworkStationEquipmentBase_C* equipment                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AworkStationEquipmentBase_C* Equipment                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UworkStationSubstanceAddWidget_C::Setup(class AinteractiveBaseObject_C* SelectedSubstance, class AworkStationEquipmentBase_C* equipment)
+void UworkStationSubstanceAddWidget_C::Setup(class AinteractiveBaseObject_C* SelectedSubstance, class AworkStationEquipmentBase_C* Equipment)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function workStationSubstanceAddWidget.workStationSubstanceAddWidget_C.Setup");
 
 	UworkStationSubstanceAddWidget_C_Setup_Params params;
 	params.SelectedSubstance = SelectedSubstance;
-	params.equipment = equipment;
+	params.Equipment = Equipment;
 
 	auto flags = fn->FunctionFlags;
 

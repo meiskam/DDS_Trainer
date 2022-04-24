@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -45,7 +45,7 @@ struct AworldConsoleCommands_C_levelUp_Params
 // Function worldConsoleCommands.worldConsoleCommands_C.giveMeExp
 struct AworldConsoleCommands_C_giveMeExp_Params
 {
-	float                                              expAmount;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              ExpAmount;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function worldConsoleCommands.worldConsoleCommands_C.spawnDrugSource

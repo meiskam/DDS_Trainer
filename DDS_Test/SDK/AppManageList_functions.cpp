@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -258,18 +258,18 @@ ESlateVisibility UAppManageList_C::GetVisibility_2()
 }
 
 
-// Function AppManageList.AppManageList_C.addListItem
+// Function AppManageList.AppManageList_C.AddListItem
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   ItemID                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            SourceIndex                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Quan                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAppManageList_C::addListItem(const struct FName& ItemID, int SourceIndex, int Quan)
+void UAppManageList_C::AddListItem(const struct FName& ItemID, int SourceIndex, int Quan)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function AppManageList.AppManageList_C.addListItem");
+	static auto fn = UObject::FindObject<UFunction>("Function AppManageList.AppManageList_C.AddListItem");
 
-	UAppManageList_C_addListItem_Params params;
+	UAppManageList_C_AddListItem_Params params;
 	params.ItemID = ItemID;
 	params.SourceIndex = SourceIndex;
 	params.Quan = Quan;

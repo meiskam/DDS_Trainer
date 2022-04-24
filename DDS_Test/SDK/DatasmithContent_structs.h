@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -34,16 +34,6 @@ enum class EVREDDataTableType : uint8_t
 };
 
 
-// Enum DatasmithContent.EDatasmithImportHierarchy
-enum class EDatasmithImportHierarchy : uint8_t
-{
-	EDatasmithImportHierarchy__UseMultipleActors = 0,
-	EDatasmithImportHierarchy__UseSingleActor = 1,
-	EDatasmithImportHierarchy__UseOneBlueprint = 2,
-	EDatasmithImportHierarchy__EDatasmithImportHierarchy_MAX = 3
-};
-
-
 // Enum DatasmithContent.EDatasmithImportScene
 enum class EDatasmithImportScene : uint8_t
 {
@@ -54,17 +44,13 @@ enum class EDatasmithImportScene : uint8_t
 };
 
 
-// Enum DatasmithContent.EDatasmithImportLightmapMax
-enum class EDatasmithImportLightmapMax : uint8_t
+// Enum DatasmithContent.EDatasmithImportHierarchy
+enum class EDatasmithImportHierarchy : uint8_t
 {
-	EDatasmithImportLightmapMax__LIGHTMAP = 0,
-	EDatasmithImportLightmapMax__LIGHTMAP01 = 1,
-	EDatasmithImportLightmapMax__LIGHTMAP02 = 2,
-	EDatasmithImportLightmapMax__LIGHTMAP03 = 3,
-	EDatasmithImportLightmapMax__LIGHTMAP04 = 4,
-	EDatasmithImportLightmapMax__LIGHTMAP05 = 5,
-	EDatasmithImportLightmapMax__LIGHTMAP06 = 6,
-	EDatasmithImportLightmapMax__LIGHTMAP_MAX = 7
+	EDatasmithImportHierarchy__UseMultipleActors = 0,
+	EDatasmithImportHierarchy__UseSingleActor = 1,
+	EDatasmithImportHierarchy__UseOneBlueprint = 2,
+	EDatasmithImportHierarchy__EDatasmithImportHierarchy_MAX = 3
 };
 
 
@@ -88,6 +74,20 @@ enum class EDatasmithImportMaterialQuality : uint8_t
 	EDatasmithImportMaterialQuality__UseSimplifierFresnelCurves = 1,
 	EDatasmithImportMaterialQuality__UseRealFresnelCurves = 2,
 	EDatasmithImportMaterialQuality__EDatasmithImportMaterialQuality_MAX = 3
+};
+
+
+// Enum DatasmithContent.EDatasmithImportLightmapMax
+enum class EDatasmithImportLightmapMax : uint8_t
+{
+	EDatasmithImportLightmapMax__LIGHTMAP = 0,
+	EDatasmithImportLightmapMax__LIGHTMAP01 = 1,
+	EDatasmithImportLightmapMax__LIGHTMAP02 = 2,
+	EDatasmithImportLightmapMax__LIGHTMAP03 = 3,
+	EDatasmithImportLightmapMax__LIGHTMAP04 = 4,
+	EDatasmithImportLightmapMax__LIGHTMAP05 = 5,
+	EDatasmithImportLightmapMax__LIGHTMAP06 = 6,
+	EDatasmithImportLightmapMax__LIGHTMAP_MAX = 7
 };
 
 

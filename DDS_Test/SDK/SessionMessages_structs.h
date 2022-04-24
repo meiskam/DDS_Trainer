@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -24,18 +24,6 @@ struct FSessionServiceLogUnsubscribe
 struct FSessionServiceLogSubscribe
 {
 	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
-};
-
-// ScriptStruct SessionMessages.SessionServiceLog
-// 0x0038
-struct FSessionServiceLog
-{
-	struct FName                                       Category;                                                 // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FString                                     Data;                                                     // 0x0008(0x0010) (Edit, ZeroConstructor)
-	struct FGuid                                       InstanceId;                                               // 0x0018(0x0010) (Edit, ZeroConstructor, IsPlainOldData)
-	double                                             TimeSeconds;                                              // 0x0028(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      Verbosity;                                                // 0x0030(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0031(0x0007) MISSED OFFSET
 };
 
 // ScriptStruct SessionMessages.SessionServicePong
@@ -63,6 +51,18 @@ struct FSessionServicePong
 struct FSessionServicePing
 {
 	struct FString                                     UserName;                                                 // 0x0000(0x0010) (Edit, ZeroConstructor)
+};
+
+// ScriptStruct SessionMessages.SessionServiceLog
+// 0x0038
+struct FSessionServiceLog
+{
+	struct FName                                       Category;                                                 // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FString                                     Data;                                                     // 0x0008(0x0010) (Edit, ZeroConstructor)
+	struct FGuid                                       InstanceId;                                               // 0x0018(0x0010) (Edit, ZeroConstructor, IsPlainOldData)
+	double                                             TimeSeconds;                                              // 0x0028(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      Verbosity;                                                // 0x0030(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0031(0x0007) MISSED OFFSET
 };
 
 }

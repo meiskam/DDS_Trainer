@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -32,7 +32,7 @@ public:
 
 
 	void depositeSafeMoney(int Quantity);
-	void parseInventory(TArray<struct FinventoryItemStruct>* backpack, TArray<int>* backpackQuan, TArray<struct FinventoryItemStruct>* pockets, TArray<int>* pocketQuan, int* quantityFound);
+	void parseInventory(TArray<struct FinventoryItemStruct>* backpack, TArray<int>* backpackQuan, TArray<struct FinventoryItemStruct>* Pockets, TArray<int>* pocketQuan, int* quantityFound);
 	void UserConstructionScript();
 	void tableActivated(class AplayerCharacterBP_C* Player);
 	void ExecuteUbergraph_weedMoneyTable(int EntryPoint);

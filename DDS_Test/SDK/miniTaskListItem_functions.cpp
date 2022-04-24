@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,19 +17,19 @@ namespace SDK
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText                   taskName                       (BlueprintVisible, BlueprintReadOnly, Parm)
-// bool                           taskDone                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           TaskDone                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            TaskID                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           taskFailed                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           taskSpecial                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           taskAwaitingDelivery           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UminiTaskListItem_C::Setup(const struct FText& taskName, bool taskDone, int TaskID, bool taskFailed, bool taskSpecial, bool taskAwaitingDelivery)
+void UminiTaskListItem_C::Setup(const struct FText& taskName, bool TaskDone, int TaskID, bool taskFailed, bool taskSpecial, bool taskAwaitingDelivery)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function miniTaskListItem.miniTaskListItem_C.Setup");
 
 	UminiTaskListItem_C_Setup_Params params;
 	params.taskName = taskName;
-	params.taskDone = taskDone;
+	params.TaskDone = TaskDone;
 	params.TaskID = TaskID;
 	params.taskFailed = taskFailed;
 	params.taskSpecial = taskSpecial;

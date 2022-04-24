@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -59,7 +59,7 @@ struct UshadyCommInterface_C_toggleAreaDetails_Params
 {
 	bool                                               Show;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	struct FString                                     AreaString;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
-	bool                                               unlocked;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Unlocked;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function shadyCommInterface.shadyCommInterface_C.spawnSeedGuy
@@ -70,7 +70,7 @@ struct UshadyCommInterface_C_spawnSeedGuy_Params
 // Function shadyCommInterface.shadyCommInterface_C.checkUserResetReadMessages
 struct UshadyCommInterface_C_checkUserResetReadMessages_Params
 {
-	int                                                userID;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int                                                UserID;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function shadyCommInterface.shadyCommInterface_C.Get_txtStatusClientSatisfaction_ToolTipWidget_1
@@ -173,7 +173,7 @@ struct UshadyCommInterface_C_clearNewMessages_Params
 // Function shadyCommInterface.shadyCommInterface_C.findSalePointByAreaID
 struct UshadyCommInterface_C_findSalePointByAreaID_Params
 {
-	struct FString                                     stringID;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+	struct FString                                     StringID;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 	struct FVector                                     Location;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	class ADrugSalePoint_C*                            SalePoint;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	struct FRotator                                    Rotation;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -183,7 +183,7 @@ struct UshadyCommInterface_C_findSalePointByAreaID_Params
 struct UshadyCommInterface_C_spawnClientOnMap_Params
 {
 	class AsalesManager_C*                             SaleManager;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	int                                                orderID;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int                                                OrderId;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function shadyCommInterface.shadyCommInterface_C.checkOptionAvailability
@@ -228,7 +228,7 @@ struct UshadyCommInterface_C_renderPriceList_Params
 // Function shadyCommInterface.shadyCommInterface_C.renderMessages
 struct UshadyCommInterface_C_renderMessages_Params
 {
-	int                                                userID;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int                                                UserID;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function shadyCommInterface.shadyCommInterface_C.renderDrugs
@@ -257,7 +257,7 @@ struct UshadyCommInterface_C_Tick_Params
 // Function shadyCommInterface.shadyCommInterface_C.Setup
 struct UshadyCommInterface_C_Setup_Params
 {
-	class AmainComputer_C*                             parentRef;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AmainComputer_C*                             ParentRef;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function shadyCommInterface.shadyCommInterface_C.BndEvt__btnOpenOptions_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature

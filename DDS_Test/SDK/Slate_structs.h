@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -22,16 +22,6 @@ enum class EVirtualKeyboardDismissAction : uint8_t
 };
 
 
-// Enum Slate.ETableViewMode
-enum class ETableViewMode : uint8_t
-{
-	ETableViewMode__List           = 0,
-	ETableViewMode__Tile           = 1,
-	ETableViewMode__Tree           = 2,
-	ETableViewMode__ETableViewMode_MAX = 3
-};
-
-
 // Enum Slate.ESelectionMode
 enum class ESelectionMode : uint8_t
 {
@@ -40,6 +30,16 @@ enum class ESelectionMode : uint8_t
 	ESelectionMode__SingleToggle   = 2,
 	ESelectionMode__Multi          = 3,
 	ESelectionMode__ESelectionMode_MAX = 4
+};
+
+
+// Enum Slate.ETableViewMode
+enum class ETableViewMode : uint8_t
+{
+	ETableViewMode__List           = 0,
+	ETableViewMode__Tile           = 1,
+	ETableViewMode__Tree           = 2,
+	ETableViewMode__ETableViewMode_MAX = 3
 };
 
 
@@ -90,17 +90,13 @@ enum class EDescendantScrollDestination : uint8_t
 };
 
 
-// Enum Slate.EListItemAlignment
-enum class EListItemAlignment : uint8_t
+// Enum Slate.ETextFlowDirection
+enum class ETextFlowDirection : uint8_t
 {
-	EListItemAlignment__EvenlyDistributed = 0,
-	EListItemAlignment__EvenlySize = 1,
-	EListItemAlignment__EvenlyWide = 2,
-	EListItemAlignment__LeftAligned = 3,
-	EListItemAlignment__RightAligned = 4,
-	EListItemAlignment__CenterAligned = 5,
-	EListItemAlignment__Fill       = 6,
-	EListItemAlignment__EListItemAlignment_MAX = 7
+	ETextFlowDirection__Auto       = 0,
+	ETextFlowDirection__LeftToRight = 1,
+	ETextFlowDirection__RightToLeft = 2,
+	ETextFlowDirection__ETextFlowDirection_MAX = 3
 };
 
 
@@ -133,13 +129,17 @@ enum class EMultipleKeyBindingIndex : uint8_t
 };
 
 
-// Enum Slate.ETextFlowDirection
-enum class ETextFlowDirection : uint8_t
+// Enum Slate.EListItemAlignment
+enum class EListItemAlignment : uint8_t
 {
-	ETextFlowDirection__Auto       = 0,
-	ETextFlowDirection__LeftToRight = 1,
-	ETextFlowDirection__RightToLeft = 2,
-	ETextFlowDirection__ETextFlowDirection_MAX = 3
+	EListItemAlignment__EvenlyDistributed = 0,
+	EListItemAlignment__EvenlySize = 1,
+	EListItemAlignment__EvenlyWide = 2,
+	EListItemAlignment__LeftAligned = 3,
+	EListItemAlignment__RightAligned = 4,
+	EListItemAlignment__CenterAligned = 5,
+	EListItemAlignment__Fill       = 6,
+	EListItemAlignment__EListItemAlignment_MAX = 7
 };
 
 

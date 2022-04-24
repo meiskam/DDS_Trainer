@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,6 +12,15 @@ namespace SDK
 // Enums
 //---------------------------------------------------------------------------
 
+// Enum AnimationCore.EConstraintType
+enum class EConstraintType : uint8_t
+{
+	EConstraintType__Transform     = 0,
+	EConstraintType__Aim           = 1,
+	EConstraintType__MAX           = 2
+};
+
+
 // Enum AnimationCore.ETransformConstraintType
 enum class ETransformConstraintType : uint8_t
 {
@@ -20,15 +29,6 @@ enum class ETransformConstraintType : uint8_t
 	ETransformConstraintType__Scale = 2,
 	ETransformConstraintType__Parent = 3,
 	ETransformConstraintType__ETransformConstraintType_MAX = 4
-};
-
-
-// Enum AnimationCore.EConstraintType
-enum class EConstraintType : uint8_t
-{
-	EConstraintType__Transform     = 0,
-	EConstraintType__Aim           = 1,
-	EConstraintType__MAX           = 2
 };
 
 
@@ -129,6 +129,15 @@ struct FTransformConstraint
 	unsigned char                                      UnknownData01[0x3];                                       // 0x0025(0x0003) MISSED OFFSET
 };
 
+// ScriptStruct AnimationCore.TransformFilter
+// 0x0009
+struct FTransformFilter
+{
+	struct FFilterOptionPerAxis                        TranslationFilter;                                        // 0x0000(0x0003) (Edit, BlueprintVisible)
+	struct FFilterOptionPerAxis                        RotationFilter;                                           // 0x0003(0x0003) (Edit, BlueprintVisible)
+	struct FFilterOptionPerAxis                        ScaleFilter;                                              // 0x0006(0x0003) (Edit, BlueprintVisible)
+};
+
 // ScriptStruct AnimationCore.ConstraintOffset
 // 0x0060
 struct FConstraintOffset
@@ -141,15 +150,6 @@ struct FConstraintOffset
 	struct FTransform                                  Parent;                                                   // 0x0030(0x0030) (IsPlainOldData)
 };
 
-// ScriptStruct AnimationCore.TransformFilter
-// 0x0009
-struct FTransformFilter
-{
-	struct FFilterOptionPerAxis                        TranslationFilter;                                        // 0x0000(0x0003) (Edit, BlueprintVisible)
-	struct FFilterOptionPerAxis                        RotationFilter;                                           // 0x0003(0x0003) (Edit, BlueprintVisible)
-	struct FFilterOptionPerAxis                        ScaleFilter;                                              // 0x0006(0x0003) (Edit, BlueprintVisible)
-};
-
 // ScriptStruct AnimationCore.EulerTransform
 // 0x0024
 struct FEulerTransform
@@ -157,6 +157,13 @@ struct FEulerTransform
 	struct FVector                                     Location;                                                 // 0x0000(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	struct FRotator                                    Rotation;                                                 // 0x000C(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     Scale;                                                    // 0x0018(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct AnimationCore.NodeChain
+// 0x0010
+struct FNodeChain
+{
+	TArray<struct FName>                               Nodes;                                                    // 0x0000(0x0010) (ZeroConstructor)
 };
 
 // ScriptStruct AnimationCore.NodeObject
@@ -182,13 +189,6 @@ struct FNodeHierarchyWithUserData
 {
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0000(0x0008) MISSED OFFSET
 	struct FNodeHierarchyData                          Hierarchy;                                                // 0x0008(0x0070)
-};
-
-// ScriptStruct AnimationCore.NodeChain
-// 0x0010
-struct FNodeChain
-{
-	TArray<struct FName>                               Nodes;                                                    // 0x0000(0x0010) (ZeroConstructor)
 };
 
 }

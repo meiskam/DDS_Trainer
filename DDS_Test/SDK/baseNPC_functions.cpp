@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -212,16 +212,16 @@ void AbaseNPC_C::randomiseAnimationDynamics()
 }
 
 
-// Function baseNPC.baseNPC_C.taskDone
+// Function baseNPC.baseNPC_C.TaskDone
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Success                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AbaseNPC_C::taskDone(bool Success)
+void AbaseNPC_C::TaskDone(bool Success)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function baseNPC.baseNPC_C.taskDone");
+	static auto fn = UObject::FindObject<UFunction>("Function baseNPC.baseNPC_C.TaskDone");
 
-	AbaseNPC_C_taskDone_Params params;
+	AbaseNPC_C_TaskDone_Params params;
 	params.Success = Success;
 
 	auto flags = fn->FunctionFlags;
@@ -388,13 +388,13 @@ void AbaseNPC_C::processReceivedDrugs()
 // int                            DrugQuantity                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FText                   characterName                  (BlueprintVisible, BlueprintReadOnly, Parm)
 // float                          expectedPrice                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// int                            orderID                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int                            OrderId                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            TaskID                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           isMale                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           isDealer                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          ExpectationLevel               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AbaseNPC_C::setupNewDrugSale(const struct FdrugData& drugData, int DrugQuantity, const struct FText& characterName, float expectedPrice, int orderID, int TaskID, bool isMale, bool isDealer, float ExpectationLevel)
+void AbaseNPC_C::setupNewDrugSale(const struct FdrugData& drugData, int DrugQuantity, const struct FText& characterName, float expectedPrice, int OrderId, int TaskID, bool isMale, bool isDealer, float ExpectationLevel)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function baseNPC.baseNPC_C.setupNewDrugSale");
 
@@ -403,7 +403,7 @@ void AbaseNPC_C::setupNewDrugSale(const struct FdrugData& drugData, int DrugQuan
 	params.DrugQuantity = DrugQuantity;
 	params.characterName = characterName;
 	params.expectedPrice = expectedPrice;
-	params.orderID = orderID;
+	params.OrderId = OrderId;
 	params.TaskID = TaskID;
 	params.isMale = isMale;
 	params.isDealer = isDealer;

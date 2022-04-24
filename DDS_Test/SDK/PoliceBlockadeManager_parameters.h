@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -26,8 +26,8 @@ struct APoliceBlockadeManager_C_GetSpawnChance_Params
 	float                                              SpawnChance;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function PoliceBlockadeManager.PoliceBlockadeManager_C.chooseSpawnPoint
-struct APoliceBlockadeManager_C_chooseSpawnPoint_Params
+// Function PoliceBlockadeManager.PoliceBlockadeManager_C.ChooseSpawnPoint
+struct APoliceBlockadeManager_C_ChooseSpawnPoint_Params
 {
 	class APoliceBlockadeArea_C*                       OutArea;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };

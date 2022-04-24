@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: DDS, Version: 1.0.8
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -629,6 +629,22 @@ public:
 };
 
 
+// Class CoreUObject.DelegateProperty
+// 0x0008 (0x0078 - 0x0070)
+class UDelegateProperty : public UProperty
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0070(0x0008) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class CoreUObject.DelegateProperty");
+		return ptr;
+	}
+
+};
+
+
 // Class CoreUObject.DoubleProperty
 // 0x0000 (0x0070 - 0x0070)
 class UDoubleProperty : public UNumericProperty
@@ -644,21 +660,6 @@ public:
 };
 
 
-// Class CoreUObject.IntProperty
-// 0x0000 (0x0070 - 0x0070)
-class UIntProperty : public UNumericProperty
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class CoreUObject.IntProperty");
-		return ptr;
-	}
-
-};
-
-
 // Class CoreUObject.FloatProperty
 // 0x0000 (0x0070 - 0x0070)
 class UFloatProperty : public UNumericProperty
@@ -668,6 +669,21 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class CoreUObject.FloatProperty");
+		return ptr;
+	}
+
+};
+
+
+// Class CoreUObject.IntProperty
+// 0x0000 (0x0070 - 0x0070)
+class UIntProperty : public UNumericProperty
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class CoreUObject.IntProperty");
 		return ptr;
 	}
 
@@ -776,6 +792,21 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class CoreUObject.MulticastDelegateProperty");
+		return ptr;
+	}
+
+};
+
+
+// Class CoreUObject.NameProperty
+// 0x0000 (0x0070 - 0x0070)
+class UNameProperty : public UProperty
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class CoreUObject.NameProperty");
 		return ptr;
 	}
 
@@ -929,37 +960,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class CoreUObject.TextProperty");
-		return ptr;
-	}
-
-};
-
-
-// Class CoreUObject.NameProperty
-// 0x0000 (0x0070 - 0x0070)
-class UNameProperty : public UProperty
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class CoreUObject.NameProperty");
-		return ptr;
-	}
-
-};
-
-
-// Class CoreUObject.DelegateProperty
-// 0x0008 (0x0078 - 0x0070)
-class UDelegateProperty : public UProperty
-{
-public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0070(0x0008) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class CoreUObject.DelegateProperty");
 		return ptr;
 	}
 

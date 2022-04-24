@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -139,7 +139,7 @@ struct UmainMenuWidget_C_BndEvt__btnLoadGame_K2Node_ComponentBoundEvent_4_OnButt
 // Function mainMenuWidget.mainMenuWidget_C.startNewGame
 struct UmainMenuWidget_C_startNewGame_Params
 {
-	TEnumAsByte<EdifficultyLevels>                     chosenDifficulty;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EdifficultyLevels>                     ChosenDifficulty;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function mainMenuWidget.mainMenuWidget_C.BndEvt__btnCasual_K2Node_ComponentBoundEvent_5_OnButtonHoverEvent__DelegateSignature

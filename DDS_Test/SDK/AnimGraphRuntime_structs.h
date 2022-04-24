@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -18,18 +18,6 @@ enum class ESphericalLimitType : uint8_t
 	ESphericalLimitType__Inner     = 0,
 	ESphericalLimitType__Outer     = 1,
 	ESphericalLimitType__ESphericalLimitType_MAX = 2
-};
-
-
-// Enum AnimGraphRuntime.AnimPhysSimSpaceType
-enum class EAnimPhysSimSpaceType : uint8_t
-{
-	AnimPhysSimSpaceType__Component = 0,
-	AnimPhysSimSpaceType__Actor    = 1,
-	AnimPhysSimSpaceType__World    = 2,
-	AnimPhysSimSpaceType__RootRelative = 3,
-	AnimPhysSimSpaceType__BoneRelative = 4,
-	AnimPhysSimSpaceType__AnimPhysSimSpaceType_MAX = 5
 };
 
 
@@ -201,6 +189,18 @@ enum class ESequenceEvalReinit : uint8_t
 };
 
 
+// Enum AnimGraphRuntime.AnimPhysSimSpaceType
+enum class EAnimPhysSimSpaceType : uint8_t
+{
+	AnimPhysSimSpaceType__Component = 0,
+	AnimPhysSimSpaceType__Actor    = 1,
+	AnimPhysSimSpaceType__World    = 2,
+	AnimPhysSimSpaceType__RootRelative = 3,
+	AnimPhysSimSpaceType__BoneRelative = 4,
+	AnimPhysSimSpaceType__AnimPhysSimSpaceType_MAX = 5
+};
+
+
 // Enum AnimGraphRuntime.ESplineBoneAxis
 enum class ESplineBoneAxis : uint8_t
 {
@@ -208,16 +208,6 @@ enum class ESplineBoneAxis : uint8_t
 	ESplineBoneAxis__Y             = 1,
 	ESplineBoneAxis__Z             = 2,
 	ESplineBoneAxis__ESplineBoneAxis_MAX = 3
-};
-
-
-// Enum AnimGraphRuntime.ERBFDistanceMethod
-enum class ERBFDistanceMethod : uint8_t
-{
-	ERBFDistanceMethod__Euclidean  = 0,
-	ERBFDistanceMethod__Quaternion = 1,
-	ERBFDistanceMethod__SwingAngle = 2,
-	ERBFDistanceMethod__ERBFDistanceMethod_MAX = 3
 };
 
 
@@ -230,6 +220,16 @@ enum class ERBFFunctionType : uint8_t
 	ERBFFunctionType__Cubic        = 3,
 	ERBFFunctionType__Quintic      = 4,
 	ERBFFunctionType__ERBFFunctionType_MAX = 5
+};
+
+
+// Enum AnimGraphRuntime.ERBFDistanceMethod
+enum class ERBFDistanceMethod : uint8_t
+{
+	ERBFDistanceMethod__Euclidean  = 0,
+	ERBFDistanceMethod__Quaternion = 1,
+	ERBFDistanceMethod__SwingAngle = 2,
+	ERBFDistanceMethod__ERBFDistanceMethod_MAX = 3
 };
 
 
@@ -1294,18 +1294,18 @@ struct FAnimNode_TwoWayBlend : public FAnimNode_Base
 	unsigned char                                      UnknownData02[0x1];                                       // 0x00F7(0x0001) MISSED OFFSET
 };
 
-// ScriptStruct AnimGraphRuntime.AnimSequencerInstanceProxy
-// 0x0220 (0x0790 - 0x0570)
-struct FAnimSequencerInstanceProxy : public FAnimInstanceProxy
-{
-	unsigned char                                      UnknownData00[0x220];                                     // 0x0570(0x0220) MISSED OFFSET
-};
-
 // ScriptStruct AnimGraphRuntime.RBFEntry
 // 0x0010
 struct FRBFEntry
 {
 	TArray<float>                                      Values;                                                   // 0x0000(0x0010) (Edit, ZeroConstructor)
+};
+
+// ScriptStruct AnimGraphRuntime.AnimSequencerInstanceProxy
+// 0x0220 (0x0790 - 0x0570)
+struct FAnimSequencerInstanceProxy : public FAnimInstanceProxy
+{
+	unsigned char                                      UnknownData00[0x220];                                     // 0x0570(0x0220) MISSED OFFSET
 };
 
 // ScriptStruct AnimGraphRuntime.RBFTarget

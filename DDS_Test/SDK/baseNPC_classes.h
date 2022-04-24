@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -18,7 +18,7 @@ class AbaseNPC_C : public ACharacter
 {
 public:
 	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0740(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class USphereComponent*                            Influence;                                                // 0x0748(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class USphereComponent*                            influence;                                                // 0x0748(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	class URamaSaveComponent*                          RamaSave;                                                 // 0x0750(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	class UStaticMeshComponent*                        SM_LeftHand;                                              // 0x0758(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	class UStaticMeshComponent*                        SM_RightHand;                                             // 0x0760(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
@@ -113,7 +113,7 @@ public:
 	void setClientLooks(bool isMale);
 	void lookAtPlayer(bool Look, float Delta);
 	void randomiseAnimationDynamics();
-	void taskDone(bool Success);
+	void TaskDone(bool Success);
 	void assignPublicTask();
 	void chooseGoHomeLocation();
 	void checkRotating(float DeltaTime);

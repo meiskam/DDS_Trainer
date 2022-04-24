@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -44,7 +44,7 @@ public:
 	float                                              playerBankMoney;                                          // 0x0548(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x054C(0x0004) MISSED OFFSET
 	TArray<struct FText>                               msgOrderRandomStarts;                                     // 0x0550(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	struct FString                                     msgString;                                                // 0x0560(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	struct FString                                     MsgString;                                                // 0x0560(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	TArray<struct FText>                               msgOrderRandomEndings;                                    // 0x0570(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	TArray<struct FString>                             messagesList;                                             // 0x0580(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	TArray<int>                                        messagesUsers;                                            // 0x0590(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
@@ -122,15 +122,15 @@ public:
 	void AddMoneyToLaunder(float Amount);
 	void ExpandRama();
 	void reconstructDrugOffer();
-	void getDrugSizeWeight(int packageGrams, float* PackageSize, float* PackageWeight);
+	void getDrugSizeWeight(int packageGrams, float* packageSize, float* packageWeight);
 	void changePrices();
 	void generateInitialBankHistory();
 	void newBankOperation(bool Income, float Amount, const struct FText& Title, const struct FText& SourceName, bool Notify, bool Legal);
 	void checkNewDrugAvailability();
-	void addUserMessage(int userID, const struct FText& Text, bool PlayerMessage);
+	void addUserMessage(int UserID, const struct FText& Text, bool PlayerMessage);
 	void getOrderRefByID(int ID, class AorderInstance_C** orderInstance);
 	void constructMessageSentence(bool LastIndex, bool BeforeLastIndex, int Quantity, const struct FdrugData& drugData, bool isSingle);
-	void sendNewOrder(TArray<struct FdrugData>* drugData, TArray<struct FName>* DrugIDs, TArray<int>* DrugQuantities);
+	void sendNewOrder(TArray<struct FdrugData>* drugData, TArray<struct FName>* DrugIDs, TArray<int>* drugQuantities);
 	void UserConstructionScript();
 	void ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);

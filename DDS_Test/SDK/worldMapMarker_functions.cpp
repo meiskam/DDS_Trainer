@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -53,10 +53,10 @@ void AworldMapMarker_C::ReceiveBeginPlay()
 // TEnumAsByte<EmapMarkerCategories> Category                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FText                   Name                           (BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FText                   ToolTip                        (BlueprintVisible, BlueprintReadOnly, Parm)
-// bool                           dealer                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Dealer                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            TaskID                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AworldMapMarker_C::Setup(TEnumAsByte<EmapMarkerCategories> Category, const struct FText& Name, const struct FText& ToolTip, bool dealer, int TaskID)
+void AworldMapMarker_C::Setup(TEnumAsByte<EmapMarkerCategories> Category, const struct FText& Name, const struct FText& ToolTip, bool Dealer, int TaskID)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function worldMapMarker.worldMapMarker_C.Setup");
 
@@ -64,7 +64,7 @@ void AworldMapMarker_C::Setup(TEnumAsByte<EmapMarkerCategories> Category, const 
 	params.Category = Category;
 	params.Name = Name;
 	params.ToolTip = ToolTip;
-	params.dealer = dealer;
+	params.Dealer = Dealer;
 	params.TaskID = TaskID;
 
 	auto flags = fn->FunctionFlags;
@@ -92,14 +92,14 @@ void AworldMapMarker_C::checkTaskEnded()
 }
 
 
-// Function worldMapMarker.worldMapMarker_C.reInitialise
+// Function worldMapMarker.worldMapMarker_C.reinitialise
 // (BlueprintCallable, BlueprintEvent)
 
-void AworldMapMarker_C::reInitialise()
+void AworldMapMarker_C::reinitialise()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function worldMapMarker.worldMapMarker_C.reInitialise");
+	static auto fn = UObject::FindObject<UFunction>("Function worldMapMarker.worldMapMarker_C.reinitialise");
 
-	AworldMapMarker_C_reInitialise_Params params;
+	AworldMapMarker_C_reinitialise_Params params;
 
 	auto flags = fn->FunctionFlags;
 

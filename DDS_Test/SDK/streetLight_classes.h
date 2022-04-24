@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -35,7 +35,7 @@ public:
 	void ReceiveBeginPlay();
 	void turnOn();
 	void turnOff();
-	void eventLightChange(bool on);
+	void eventLightChange(bool On);
 	void ExecuteUbergraph_streetLight(int EntryPoint);
 };
 

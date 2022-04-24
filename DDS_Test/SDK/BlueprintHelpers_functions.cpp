@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -42,16 +42,16 @@ void UBlueprintHelpers_C::STATIC_DrugFormToText(TEnumAsByte<EdrugForm> drugForm,
 // Function BlueprintHelpers.BlueprintHelpers_C.GetHourTimestamp
 // (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AdayTimeControler_C*     dayTimeCon                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AdayTimeControler_C*     DayTimeCon                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            IntTimestamp                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBlueprintHelpers_C::STATIC_GetHourTimestamp(class AdayTimeControler_C* dayTimeCon, class UObject* __WorldContext, int* IntTimestamp)
+void UBlueprintHelpers_C::STATIC_GetHourTimestamp(class AdayTimeControler_C* DayTimeCon, class UObject* __WorldContext, int* IntTimestamp)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BlueprintHelpers.BlueprintHelpers_C.GetHourTimestamp");
 
 	UBlueprintHelpers_C_GetHourTimestamp_Params params;
-	params.dayTimeCon = dayTimeCon;
+	params.DayTimeCon = DayTimeCon;
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
@@ -326,17 +326,17 @@ void UBlueprintHelpers_C::STATIC_GetBalanceFlag(const struct FName& FlagID, clas
 // Function BlueprintHelpers.BlueprintHelpers_C.StringIDToSubstanceName
 // (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// struct FString                 stringID                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+// struct FString                 StringID                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Found                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FName                   OutSubstanceName               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBlueprintHelpers_C::STATIC_StringIDToSubstanceName(const struct FString& stringID, class UObject* __WorldContext, bool* Found, struct FName* OutSubstanceName)
+void UBlueprintHelpers_C::STATIC_StringIDToSubstanceName(const struct FString& StringID, class UObject* __WorldContext, bool* Found, struct FName* OutSubstanceName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BlueprintHelpers.BlueprintHelpers_C.StringIDToSubstanceName");
 
 	UBlueprintHelpers_C_StringIDToSubstanceName_Params params;
-	params.stringID = stringID;
+	params.StringID = StringID;
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;

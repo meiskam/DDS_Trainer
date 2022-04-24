@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -26,7 +26,7 @@ public:
 
 
 	void STATIC_DrugFormToText(TEnumAsByte<EdrugForm> drugForm, class UObject* __WorldContext, struct FText* OutText);
-	void STATIC_GetHourTimestamp(class AdayTimeControler_C* dayTimeCon, class UObject* __WorldContext, int* IntTimestamp);
+	void STATIC_GetHourTimestamp(class AdayTimeControler_C* DayTimeCon, class UObject* __WorldContext, int* IntTimestamp);
 	void STATIC_DisplayConfirmWidget(class UObject* Querier, const struct FText& Title, const struct FText& Descritpion, bool ShowMouseAfter, const struct FString& ActionID, class UObject* __WorldContext);
 	void STATIC_GetDealerLevel(float DealerExp, class UObject* __WorldContext, int* OutLevel, float* NextLevelProgress);
 	void STATIC_GetMixName(const struct FMixProportionsStruct& InMix, class UObject* __WorldContext, struct FText* substanceName);
@@ -36,7 +36,7 @@ public:
 	void STATIC_GetDrugMeta(const struct FName& DrugID, class UObject* __WorldContext, bool* Success, struct FNewDrugData* DrugMeta);
 	void STATIC_SubstanceFormToIcon(TEnumAsByte<EdrugForm> drugForm, int Gramature, class UObject* __WorldContext, class UTexture2D** IconOut);
 	void STATIC_GetBalanceFlag(const struct FName& FlagID, class UObject* __WorldContext, struct FFlagStruct* FlagData, bool* FlagExists);
-	void STATIC_StringIDToSubstanceName(const struct FString& stringID, class UObject* __WorldContext, bool* Found, struct FName* OutSubstanceName);
+	void STATIC_StringIDToSubstanceName(const struct FString& StringID, class UObject* __WorldContext, bool* Found, struct FName* OutSubstanceName);
 	void STATIC_DrugToMixProportions(const struct FdrugData& InDrugData, class UObject* __WorldContext, struct FMixProportionsStruct* OutProportions);
 	void STATIC_GetSaleAreaMeta(const struct FName& AreaID, class UObject* __WorldContext, bool* Success, struct FSaleAreaData* OutMeta);
 	void STATIC_IsEmptyGuid(const struct FGuid& Guid, class UObject* __WorldContext, bool* IsEmpty);

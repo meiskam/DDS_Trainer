@@ -4,9 +4,8 @@
 #include <vector>
 #include <locale>
 #include <set>
-#include <excpt.h>
 
-// Name: DDS, Version: 1.0.8
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)

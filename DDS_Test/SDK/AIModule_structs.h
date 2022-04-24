@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -87,24 +87,25 @@ enum class EAIRequestPriority : uint8_t
 };
 
 
+// Enum AIModule.EPawnActionEventType
+enum class EPawnActionEventType : uint8_t
+{
+	EPawnActionEventType__Invalid  = 0,
+	EPawnActionEventType__FailedToStart = 1,
+	EPawnActionEventType__InstantAbort = 2,
+	EPawnActionEventType__FinishedAborting = 3,
+	EPawnActionEventType__FinishedExecution = 4,
+	EPawnActionEventType__Push     = 5,
+	EPawnActionEventType__EPawnActionEventType_MAX = 6
+};
+
+
 // Enum AIModule.EAISenseNotifyType
 enum class EAISenseNotifyType : uint8_t
 {
 	EAISenseNotifyType__OnEveryPerception = 0,
 	EAISenseNotifyType__OnPerceptionChange = 1,
 	EAISenseNotifyType__EAISenseNotifyType_MAX = 2
-};
-
-
-// Enum AIModule.EPawnActionResult
-enum class EPawnActionResult : uint8_t
-{
-	EPawnActionResult__NotStarted  = 0,
-	EPawnActionResult__InProgress  = 1,
-	EPawnActionResult__Success     = 2,
-	EPawnActionResult__Failed      = 3,
-	EPawnActionResult__Aborted     = 4,
-	EPawnActionResult__EPawnActionResult_MAX = 5
 };
 
 
@@ -140,16 +141,26 @@ enum class EAIOptionFlag : uint8_t
 };
 
 
-// Enum AIModule.EPawnActionEventType
-enum class EPawnActionEventType : uint8_t
+// Enum AIModule.EPawnActionResult
+enum class EPawnActionResult : uint8_t
 {
-	EPawnActionEventType__Invalid  = 0,
-	EPawnActionEventType__FailedToStart = 1,
-	EPawnActionEventType__InstantAbort = 2,
-	EPawnActionEventType__FinishedAborting = 3,
-	EPawnActionEventType__FinishedExecution = 4,
-	EPawnActionEventType__Push     = 5,
-	EPawnActionEventType__EPawnActionEventType_MAX = 6
+	EPawnActionResult__NotStarted  = 0,
+	EPawnActionResult__InProgress  = 1,
+	EPawnActionResult__Success     = 2,
+	EPawnActionResult__Failed      = 3,
+	EPawnActionResult__Aborted     = 4,
+	EPawnActionResult__EPawnActionResult_MAX = 5
+};
+
+
+// Enum AIModule.EBTFlowAbortMode
+enum class EBTFlowAbortMode : uint8_t
+{
+	EBTFlowAbortMode__None         = 0,
+	EBTFlowAbortMode__LowerPriority = 1,
+	EBTFlowAbortMode__Self         = 2,
+	EBTFlowAbortMode__Both         = 3,
+	EBTFlowAbortMode__EBTFlowAbortMode_MAX = 4
 };
 
 
@@ -175,17 +186,6 @@ enum class ETextKeyOperation : uint8_t
 };
 
 
-// Enum AIModule.EBTFlowAbortMode
-enum class EBTFlowAbortMode : uint8_t
-{
-	EBTFlowAbortMode__None         = 0,
-	EBTFlowAbortMode__LowerPriority = 1,
-	EBTFlowAbortMode__Self         = 2,
-	EBTFlowAbortMode__Both         = 3,
-	EBTFlowAbortMode__EBTFlowAbortMode_MAX = 4
-};
-
-
 // Enum AIModule.EBasicKeyOperation
 enum class EBasicKeyOperation : uint8_t
 {
@@ -195,12 +195,16 @@ enum class EBasicKeyOperation : uint8_t
 };
 
 
-// Enum AIModule.EBTParallelMode
-enum class EBTParallelMode : uint8_t
+// Enum AIModule.EArithmeticKeyOperation
+enum class EArithmeticKeyOperation : uint8_t
 {
-	EBTParallelMode__AbortBackground = 0,
-	EBTParallelMode__WaitForBackground = 1,
-	EBTParallelMode__EBTParallelMode_MAX = 2
+	EArithmeticKeyOperation__Equal = 0,
+	EArithmeticKeyOperation__NotEqual = 1,
+	EArithmeticKeyOperation__Less  = 2,
+	EArithmeticKeyOperation__LessOrEqual = 3,
+	EArithmeticKeyOperation__Greater = 4,
+	EArithmeticKeyOperation__GreaterOrEqual = 5,
+	EArithmeticKeyOperation__EArithmeticKeyOperation_MAX = 6
 };
 
 
@@ -225,16 +229,12 @@ enum class EBTChildIndex : uint8_t
 };
 
 
-// Enum AIModule.EArithmeticKeyOperation
-enum class EArithmeticKeyOperation : uint8_t
+// Enum AIModule.EBTBlackboardRestart
+enum class EBTBlackboardRestart : uint8_t
 {
-	EArithmeticKeyOperation__Equal = 0,
-	EArithmeticKeyOperation__NotEqual = 1,
-	EArithmeticKeyOperation__Less  = 2,
-	EArithmeticKeyOperation__LessOrEqual = 3,
-	EArithmeticKeyOperation__Greater = 4,
-	EArithmeticKeyOperation__GreaterOrEqual = 5,
-	EArithmeticKeyOperation__EArithmeticKeyOperation_MAX = 6
+	EBTBlackboardRestart__ValueChange = 0,
+	EBTBlackboardRestart__ResultChange = 1,
+	EBTBlackboardRestart__EBTBlackboardRestart_MAX = 2
 };
 
 
@@ -266,12 +266,12 @@ enum class EPointOnCircleSpacingMethod : uint8_t
 };
 
 
-// Enum AIModule.EBTBlackboardRestart
-enum class EBTBlackboardRestart : uint8_t
+// Enum AIModule.EEQSNormalizationType
+enum class EEQSNormalizationType : uint8_t
 {
-	EBTBlackboardRestart__ValueChange = 0,
-	EBTBlackboardRestart__ResultChange = 1,
-	EBTBlackboardRestart__EBTBlackboardRestart_MAX = 2
+	EEQSNormalizationType__Absolute = 0,
+	EEQSNormalizationType__RelativeToScores = 1,
+	EEQSNormalizationType__EEQSNormalizationType_MAX = 2
 };
 
 
@@ -286,15 +286,6 @@ enum class EEnvTestDistance : uint8_t
 };
 
 
-// Enum AIModule.EEnvTestDot
-enum class EEnvTestDot : uint8_t
-{
-	EEnvTestDot__Dot3D             = 0,
-	EEnvTestDot__Dot2D             = 1,
-	EEnvTestDot__EEnvTestDot_MAX   = 2
-};
-
-
 // Enum AIModule.EEnvTestPathfinding
 enum class EEnvTestPathfinding : uint8_t
 {
@@ -302,6 +293,15 @@ enum class EEnvTestPathfinding : uint8_t
 	EEnvTestPathfinding__PathCost  = 1,
 	EEnvTestPathfinding__PathLength = 2,
 	EEnvTestPathfinding__EEnvTestPathfinding_MAX = 3
+};
+
+
+// Enum AIModule.EEnvTestDot
+enum class EEnvTestDot : uint8_t
+{
+	EEnvTestDot__Dot3D             = 0,
+	EEnvTestDot__Dot2D             = 1,
+	EEnvTestDot__EEnvTestDot_MAX   = 2
 };
 
 
@@ -315,15 +315,6 @@ enum class EEnvQueryTestClamping : uint8_t
 };
 
 
-// Enum AIModule.EEQSNormalizationType
-enum class EEQSNormalizationType : uint8_t
-{
-	EEQSNormalizationType__Absolute = 0,
-	EEQSNormalizationType__RelativeToScores = 1,
-	EEQSNormalizationType__EEQSNormalizationType_MAX = 2
-};
-
-
 // Enum AIModule.EEnvOverlapShape
 enum class EEnvOverlapShape : uint8_t
 {
@@ -334,14 +325,12 @@ enum class EEnvOverlapShape : uint8_t
 };
 
 
-// Enum AIModule.EEnvTraceShape
-enum class EEnvTraceShape : uint8_t
+// Enum AIModule.EEnvDirection
+enum class EEnvDirection : uint8_t
 {
-	EEnvTraceShape__Line           = 0,
-	EEnvTraceShape__Box            = 1,
-	EEnvTraceShape__Sphere         = 2,
-	EEnvTraceShape__Capsule        = 3,
-	EEnvTraceShape__EEnvTraceShape_MAX = 4
+	EEnvDirection__TwoPoints       = 0,
+	EEnvDirection__Rotation        = 1,
+	EEnvDirection__EEnvDirection_MAX = 2
 };
 
 
@@ -366,6 +355,17 @@ enum class EAIParamType : uint8_t
 };
 
 
+// Enum AIModule.EEnvTraceShape
+enum class EEnvTraceShape : uint8_t
+{
+	EEnvTraceShape__Line           = 0,
+	EEnvTraceShape__Box            = 1,
+	EEnvTraceShape__Sphere         = 2,
+	EEnvTraceShape__Capsule        = 3,
+	EEnvTraceShape__EEnvTraceShape_MAX = 4
+};
+
+
 // Enum AIModule.EEnvQueryParam
 enum class EEnvQueryParam : uint8_t
 {
@@ -387,6 +387,15 @@ enum class EEnvQueryRunMode : uint8_t
 };
 
 
+// Enum AIModule.EEnvTestFilterOperator
+enum class EEnvTestFilterOperator : uint8_t
+{
+	EEnvTestFilterOperator__AllPass = 0,
+	EEnvTestFilterOperator__AnyPass = 1,
+	EEnvTestFilterOperator__EEnvTestFilterOperator_MAX = 2
+};
+
+
 // Enum AIModule.EEnvTestScoreOperator
 enum class EEnvTestScoreOperator : uint8_t
 {
@@ -394,15 +403,6 @@ enum class EEnvTestScoreOperator : uint8_t
 	EEnvTestScoreOperator__MinScore = 1,
 	EEnvTestScoreOperator__MaxScore = 2,
 	EEnvTestScoreOperator__EEnvTestScoreOperator_MAX = 3
-};
-
-
-// Enum AIModule.EEnvTestFilterOperator
-enum class EEnvTestFilterOperator : uint8_t
-{
-	EEnvTestFilterOperator__AllPass = 0,
-	EEnvTestFilterOperator__AnyPass = 1,
-	EEnvTestFilterOperator__EEnvTestFilterOperator_MAX = 2
 };
 
 
@@ -452,22 +452,22 @@ enum class EEnvTestFilterType : uint8_t
 };
 
 
-// Enum AIModule.EEnvDirection
-enum class EEnvDirection : uint8_t
+// Enum AIModule.EEnvTestPurpose
+enum class EEnvTestPurpose : uint8_t
 {
-	EEnvDirection__TwoPoints       = 0,
-	EEnvDirection__Rotation        = 1,
-	EEnvDirection__EEnvDirection_MAX = 2
+	EEnvTestPurpose__Filter        = 0,
+	EEnvTestPurpose__Score         = 1,
+	EEnvTestPurpose__FilterAndScore = 2,
+	EEnvTestPurpose__EEnvTestPurpose_MAX = 3
 };
 
 
-// Enum AIModule.EEnvQueryHightlightMode
-enum class EEnvQueryHightlightMode : uint8_t
+// Enum AIModule.EBTParallelMode
+enum class EBTParallelMode : uint8_t
 {
-	EEnvQueryHightlightMode__All   = 0,
-	EEnvQueryHightlightMode__Best5Pct = 1,
-	EEnvQueryHightlightMode__Best25Pct = 2,
-	EEnvQueryHightlightMode__EEnvQueryHightlightMode_MAX = 3
+	EBTParallelMode__AbortBackground = 0,
+	EBTParallelMode__WaitForBackground = 1,
+	EBTParallelMode__EBTParallelMode_MAX = 2
 };
 
 
@@ -514,15 +514,6 @@ enum class EPathFollowingStatus : uint8_t
 };
 
 
-// Enum AIModule.EPawnActionFailHandling
-enum class EPawnActionFailHandling : uint8_t
-{
-	EPawnActionFailHandling__RequireSuccess = 0,
-	EPawnActionFailHandling__IgnoreFailure = 1,
-	EPawnActionFailHandling__EPawnActionFailHandling_MAX = 2
-};
-
-
 // Enum AIModule.EPawnSubActionTriggeringPolicy
 enum class EPawnSubActionTriggeringPolicy : uint8_t
 {
@@ -532,13 +523,12 @@ enum class EPawnSubActionTriggeringPolicy : uint8_t
 };
 
 
-// Enum AIModule.EEnvTestPurpose
-enum class EEnvTestPurpose : uint8_t
+// Enum AIModule.EPawnActionFailHandling
+enum class EPawnActionFailHandling : uint8_t
 {
-	EEnvTestPurpose__Filter        = 0,
-	EEnvTestPurpose__Score         = 1,
-	EEnvTestPurpose__FilterAndScore = 2,
-	EEnvTestPurpose__EEnvTestPurpose_MAX = 3
+	EPawnActionFailHandling__RequireSuccess = 0,
+	EPawnActionFailHandling__IgnoreFailure = 1,
+	EPawnActionFailHandling__EPawnActionFailHandling_MAX = 2
 };
 
 
@@ -548,6 +538,16 @@ enum class EPawnActionMoveMode : uint8_t
 	EPawnActionMoveMode__UsePathfinding = 0,
 	EPawnActionMoveMode__StraightLine = 1,
 	EPawnActionMoveMode__EPawnActionMoveMode_MAX = 2
+};
+
+
+// Enum AIModule.EEnvQueryHightlightMode
+enum class EEnvQueryHightlightMode : uint8_t
+{
+	EEnvQueryHightlightMode__All   = 0,
+	EEnvQueryHightlightMode__Best5Pct = 1,
+	EEnvQueryHightlightMode__Best25Pct = 2,
+	EEnvQueryHightlightMode__EEnvQueryHightlightMode_MAX = 3
 };
 
 
@@ -847,6 +847,14 @@ struct FEnvDirection
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0019(0x0007) MISSED OFFSET
 };
 
+// ScriptStruct AIModule.EnvQueryInstanceCache
+// 0x0178
+struct FEnvQueryInstanceCache
+{
+	class UEnvQuery*                                   Template;                                                 // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x170];                                     // 0x0008(0x0170) MISSED OFFSET
+};
+
 // ScriptStruct AIModule.EnvOverlapData
 // 0x0020
 struct FEnvOverlapData
@@ -861,14 +869,6 @@ struct FEnvOverlapData
 	unsigned char                                      bOnlyBlockingHits : 1;                                    // 0x001C(0x0001) (Edit, DisableEditOnInstance)
 	unsigned char                                      bOverlapComplex : 1;                                      // 0x001C(0x0001) (Edit, DisableEditOnInstance)
 	unsigned char                                      UnknownData01[0x3];                                       // 0x001D(0x0003) MISSED OFFSET
-};
-
-// ScriptStruct AIModule.EnvQueryInstanceCache
-// 0x0178
-struct FEnvQueryInstanceCache
-{
-	class UEnvQuery*                                   Template;                                                 // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x170];                                     // 0x0008(0x0170) MISSED OFFSET
 };
 
 // ScriptStruct AIModule.PawnActionStack

@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -495,9 +495,9 @@ void UinventoryScreen_C::countTradeItemSizing(float* TotalSize, float* TotalWieg
 // Function inventoryScreen.inventoryScreen_C.countItemValue
 // (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            totalValue                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// int                            TotalValue                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UinventoryScreen_C::countItemValue(int* totalValue)
+void UinventoryScreen_C::countItemValue(int* TotalValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function inventoryScreen.inventoryScreen_C.countItemValue");
 
@@ -509,8 +509,8 @@ void UinventoryScreen_C::countItemValue(int* totalValue)
 
 	fn->FunctionFlags = flags;
 
-	if (totalValue != nullptr)
-		*totalValue = params.totalValue;
+	if (TotalValue != nullptr)
+		*TotalValue = params.TotalValue;
 }
 
 

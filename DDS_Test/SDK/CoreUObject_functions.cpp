@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: DDS, Version: 1.0.8
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,23 +30,6 @@ std::string UObject::GetName() const
 	return name.substr(pos + 1);
 }
 
-std::wstring UObject::GetWName() const
-{
-	std::wstring name(Name.GetWName());
-	if (Name.Number > 0)
-	{
-		name += L'_' + std::to_wstring(Name.Number);
-	}
-
-	auto pos = name.rfind(L'/');
-	if (pos == std::string::npos)
-	{
-		return name;
-	}
-
-	return name.substr(pos + 1);
-}
-
 std::string UObject::GetFullName() const
 {
 	std::string name;
@@ -63,27 +46,6 @@ std::string UObject::GetFullName() const
 		name += " ";
 		name += temp;
 		name += GetName();
-	}
-
-	return name;
-}
-
-std::wstring UObject::GetFullWName() const
-{
-	std::wstring name;
-
-	if (Class != nullptr)
-	{
-		std::wstring temp;
-		for (auto p = Outer; p; p = p->Outer)
-		{
-			temp = p->GetWName() + L'.' + temp;
-		}
-
-		name = Class->GetWName();
-		name += L" ";
-		name += temp;
-		name += GetWName();
 	}
 
 	return name;

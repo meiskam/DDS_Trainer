@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -53,8 +53,8 @@ struct AmainComputer_C_reconstructDrugOffer_Params
 struct AmainComputer_C_getDrugSizeWeight_Params
 {
 	int                                                packageGrams;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	float                                              PackageSize;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	float                                              PackageWeight;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              packageSize;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              packageWeight;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function mainComputer.mainComputer_C.changePrices
@@ -86,7 +86,7 @@ struct AmainComputer_C_checkNewDrugAvailability_Params
 // Function mainComputer.mainComputer_C.addUserMessage
 struct AmainComputer_C_addUserMessage_Params
 {
-	int                                                userID;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int                                                UserID;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	struct FText                                       Text;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm)
 	bool                                               PlayerMessage;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
@@ -113,7 +113,7 @@ struct AmainComputer_C_sendNewOrder_Params
 {
 	TArray<struct FdrugData>                           drugData;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 	TArray<struct FName>                               DrugIDs;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-	TArray<int>                                        DrugQuantities;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+	TArray<int>                                        drugQuantities;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 };
 
 // Function mainComputer.mainComputer_C.UserConstructionScript

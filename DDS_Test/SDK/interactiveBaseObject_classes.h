@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -56,7 +56,7 @@ public:
 	}
 
 
-	void VerifyBaseSizing(bool* ok);
+	void VerifyBaseSizing(bool* OK);
 	void GetEquipmentMeta(bool* Success, struct FappartmentEquipment* EquipmentMeta);
 	void GetItemMeta(bool* Success, struct FNewItemStructure* ItemMeta);
 	void CheckForInnerClasses(int innerIndex, int DeepIndex, bool* Match);

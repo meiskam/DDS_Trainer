@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -77,16 +77,16 @@ public:
 	}
 
 
-	void checkAvailableApartments(bool* ok);
+	void checkAvailableApartments(bool* OK);
 	void updateBalance();
 	void checkPlayerHasApartments(bool* hasApartments);
 	void renderAppartments();
 	void renderMainList();
 	void renderCheckoutItems();
 	void recalcCheckout();
-	void addListItem(const struct FName& ItemID, float Price, class UequipmentShopItemWidget_C** ItemRef);
+	void AddListItem(const struct FName& ItemID, float Price, class UequipmentShopItemWidget_C** ItemRef);
 	void Construct();
-	void Setup(TArray<struct FappartmentEquipment> baseEq, TArray<float> basePrices, class AequipmentShop_C* ParentShopRef, TArray<bool> unlocked);
+	void Setup(TArray<struct FappartmentEquipment> baseEq, TArray<float> basePrices, class AequipmentShop_C* ParentShopRef, TArray<bool> Unlocked);
 	void BndEvt__btnOrderPay_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
 	void BndEvt__btnOrderPay_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature();
 	void BndEvt__btnConfirmAddress_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature();

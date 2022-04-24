@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,8 +30,8 @@ struct AnoisyNeighbourBP_C_ReceiveTick_Params
 	float                                              DeltaSeconds;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function noisyNeighbourBP.noisyNeighbourBP_C.reInitialise
-struct AnoisyNeighbourBP_C_reInitialise_Params
+// Function noisyNeighbourBP.noisyNeighbourBP_C.reinitialise
+struct AnoisyNeighbourBP_C_reinitialise_Params
 {
 };
 

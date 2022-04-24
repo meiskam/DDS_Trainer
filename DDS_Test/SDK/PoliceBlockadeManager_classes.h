@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -39,7 +39,7 @@ public:
 
 	void GetBlockadeLifetime(float* LifeTime);
 	void GetSpawnChance(float* SpawnChance);
-	void chooseSpawnPoint(class APoliceBlockadeArea_C** OutArea);
+	void ChooseSpawnPoint(class APoliceBlockadeArea_C** OutArea);
 	void RegisterPlayer(class APoliceBlockadeArea_C* Area);
 	void UserConstructionScript();
 	void ReceiveBeginPlay();

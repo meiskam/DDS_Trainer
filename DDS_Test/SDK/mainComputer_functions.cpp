@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -137,10 +137,10 @@ void AmainComputer_C::reconstructDrugOffer()
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            packageGrams                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// float                          PackageSize                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// float                          PackageWeight                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float                          packageSize                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float                          packageWeight                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AmainComputer_C::getDrugSizeWeight(int packageGrams, float* PackageSize, float* PackageWeight)
+void AmainComputer_C::getDrugSizeWeight(int packageGrams, float* packageSize, float* packageWeight)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function mainComputer.mainComputer_C.getDrugSizeWeight");
 
@@ -153,10 +153,10 @@ void AmainComputer_C::getDrugSizeWeight(int packageGrams, float* PackageSize, fl
 
 	fn->FunctionFlags = flags;
 
-	if (PackageSize != nullptr)
-		*PackageSize = params.PackageSize;
-	if (PackageWeight != nullptr)
-		*PackageWeight = params.PackageWeight;
+	if (packageSize != nullptr)
+		*packageSize = params.packageSize;
+	if (packageWeight != nullptr)
+		*packageWeight = params.packageWeight;
 }
 
 
@@ -244,16 +244,16 @@ void AmainComputer_C::checkNewDrugAvailability()
 // Function mainComputer.mainComputer_C.addUserMessage
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            userID                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int                            UserID                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FText                   Text                           (BlueprintVisible, BlueprintReadOnly, Parm)
 // bool                           PlayerMessage                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AmainComputer_C::addUserMessage(int userID, const struct FText& Text, bool PlayerMessage)
+void AmainComputer_C::addUserMessage(int UserID, const struct FText& Text, bool PlayerMessage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function mainComputer.mainComputer_C.addUserMessage");
 
 	AmainComputer_C_addUserMessage_Params params;
-	params.userID = userID;
+	params.UserID = UserID;
 	params.Text = Text;
 	params.PlayerMessage = PlayerMessage;
 
@@ -322,9 +322,9 @@ void AmainComputer_C::constructMessageSentence(bool LastIndex, bool BeforeLastIn
 // Parameters:
 // TArray<struct FdrugData>       drugData                       (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FName>           DrugIDs                        (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<int>                    DrugQuantities                 (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<int>                    drugQuantities                 (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void AmainComputer_C::sendNewOrder(TArray<struct FdrugData>* drugData, TArray<struct FName>* DrugIDs, TArray<int>* DrugQuantities)
+void AmainComputer_C::sendNewOrder(TArray<struct FdrugData>* drugData, TArray<struct FName>* DrugIDs, TArray<int>* drugQuantities)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function mainComputer.mainComputer_C.sendNewOrder");
 
@@ -340,8 +340,8 @@ void AmainComputer_C::sendNewOrder(TArray<struct FdrugData>* drugData, TArray<st
 		*drugData = params.drugData;
 	if (DrugIDs != nullptr)
 		*DrugIDs = params.DrugIDs;
-	if (DrugQuantities != nullptr)
-		*DrugQuantities = params.DrugQuantities;
+	if (drugQuantities != nullptr)
+		*drugQuantities = params.drugQuantities;
 }
 
 

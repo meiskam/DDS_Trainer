@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -81,8 +81,8 @@ struct UworkStationUI_C_Tick_Params
 	float                                              InDeltaTime;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function workStationUI.workStationUI_C.reInitialise
-struct UworkStationUI_C_reInitialise_Params
+// Function workStationUI.workStationUI_C.reinitialise
+struct UworkStationUI_C_reinitialise_Params
 {
 };
 

@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -156,7 +156,7 @@ struct UinventoryScreen_C_countTradeItemSizing_Params
 // Function inventoryScreen.inventoryScreen_C.countItemValue
 struct UinventoryScreen_C_countItemValue_Params
 {
-	int                                                totalValue;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	int                                                TotalValue;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function inventoryScreen.inventoryScreen_C.clearTradeItems

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -140,7 +140,7 @@ public:
 	class USizeBox*                                    userOptionsPanel;                                         // 0x05C8(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, RepNotify, Interp, NonTransactional, EditorOnly, NoDestructor, AutoWeak, ContainsInstancedReference, AssetRegistrySearchable, SimpleDisplay, AdvancedDisplay, Protected, BlueprintCallable, BlueprintAuthorityOnly, TextExportTransient, NonPIEDuplicateTransient, ExposeOnSpawn, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, NativeAccessSpecifierProtected, NativeAccessSpecifierPrivate)
 	class UVerticalBox*                                walletPanel;                                              // 0x05D0(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, RepNotify, Interp, NonTransactional, EditorOnly, NoDestructor, AutoWeak, ContainsInstancedReference, AssetRegistrySearchable, SimpleDisplay, AdvancedDisplay, Protected, BlueprintCallable, BlueprintAuthorityOnly, TextExportTransient, NonPIEDuplicateTransient, ExposeOnSpawn, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, NativeAccessSpecifierProtected, NativeAccessSpecifierPrivate)
 	class UVerticalBox*                                warningHolder;                                            // 0x05D8(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, RepNotify, Interp, NonTransactional, EditorOnly, NoDestructor, AutoWeak, ContainsInstancedReference, AssetRegistrySearchable, SimpleDisplay, AdvancedDisplay, Protected, BlueprintCallable, BlueprintAuthorityOnly, TextExportTransient, NonPIEDuplicateTransient, ExposeOnSpawn, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, NativeAccessSpecifierProtected, NativeAccessSpecifierPrivate)
-	class AmainComputer_C*                             parentRef;                                                // 0x05E0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
+	class AmainComputer_C*                             ParentRef;                                                // 0x05E0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
 	int                                                curSelectedUser;                                          // 0x05E8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	int                                                curEditedPrice;                                           // 0x05EC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	class UbankAppWidget_C*                            NewVar_1;                                                 // 0x05F0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
@@ -182,9 +182,9 @@ public:
 	void OpenArrestList();
 	struct FText Get_TextBlock_28_Text_1();
 	void determineSector(const struct FString& AreaNam, int* SectorNum);
-	void toggleAreaDetails(bool Show, const struct FString& AreaString, bool unlocked);
+	void toggleAreaDetails(bool Show, const struct FString& AreaString, bool Unlocked);
 	void spawnSeedGuy();
-	void checkUserResetReadMessages(int userID);
+	void checkUserResetReadMessages(int UserID);
 	class UWidget* Get_txtStatusClientSatisfaction_ToolTipWidget_1();
 	class UWidget* Get_txtStatusDeliveryTime_ToolTipWidget_1();
 	void countAverageSatisfaction(TArray<bool>* clientsLost, TArray<float>* ClientSatisfaction, TArray<int>* ClientNumSales);
@@ -201,8 +201,8 @@ public:
 	void renderGroupContacts(class AcontactsManager_C* contactsManager, TArray<int>* idsGroup);
 	void putContactListSection(const struct FText& Nam);
 	void clearNewMessages();
-	void findSalePointByAreaID(const struct FString& stringID, struct FVector* Location, class ADrugSalePoint_C** SalePoint, struct FRotator* Rotation);
-	void spawnClientOnMap(class AsalesManager_C* SaleManager, int orderID);
+	void findSalePointByAreaID(const struct FString& StringID, struct FVector* Location, class ADrugSalePoint_C** SalePoint, struct FRotator* Rotation);
+	void spawnClientOnMap(class AsalesManager_C* SaleManager, int OrderId);
 	void checkOptionAvailability();
 	void switchContact(int newContactID);
 	class UWidget* Get_btnBankAccount_ToolTipWidget_1();
@@ -210,12 +210,12 @@ public:
 	class UWidget* Get_txtWalletCrypto_ToolTipWidget_1();
 	void updateWallet();
 	void renderPriceList();
-	void renderMessages(int userID);
+	void renderMessages(int UserID);
 	void renderDrugs(class AmainComputer_C* Computer);
 	void renderContacts();
 	void Construct();
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void Setup(class AmainComputer_C* parentRef);
+	void Setup(class AmainComputer_C* ParentRef);
 	void BndEvt__btnOpenOptions_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
 	void BndEvt__btnSendMessage_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature();
 	void BndEvt__btnCloseOptions_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature();

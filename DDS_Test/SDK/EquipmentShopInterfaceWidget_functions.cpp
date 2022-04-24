@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -16,9 +16,9 @@ namespace SDK
 // Function EquipmentShopInterfaceWidget.EquipmentShopInterfaceWidget_C.checkAvailableApartments
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           ok                             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           OK                             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UEquipmentShopInterfaceWidget_C::checkAvailableApartments(bool* ok)
+void UEquipmentShopInterfaceWidget_C::checkAvailableApartments(bool* OK)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EquipmentShopInterfaceWidget.EquipmentShopInterfaceWidget_C.checkAvailableApartments");
 
@@ -30,8 +30,8 @@ void UEquipmentShopInterfaceWidget_C::checkAvailableApartments(bool* ok)
 
 	fn->FunctionFlags = flags;
 
-	if (ok != nullptr)
-		*ok = params.ok;
+	if (OK != nullptr)
+		*OK = params.OK;
 }
 
 
@@ -142,18 +142,18 @@ void UEquipmentShopInterfaceWidget_C::recalcCheckout()
 }
 
 
-// Function EquipmentShopInterfaceWidget.EquipmentShopInterfaceWidget_C.addListItem
+// Function EquipmentShopInterfaceWidget.EquipmentShopInterfaceWidget_C.AddListItem
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   ItemID                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Price                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UequipmentShopItemWidget_C* ItemRef                        (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UEquipmentShopInterfaceWidget_C::addListItem(const struct FName& ItemID, float Price, class UequipmentShopItemWidget_C** ItemRef)
+void UEquipmentShopInterfaceWidget_C::AddListItem(const struct FName& ItemID, float Price, class UequipmentShopItemWidget_C** ItemRef)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function EquipmentShopInterfaceWidget.EquipmentShopInterfaceWidget_C.addListItem");
+	static auto fn = UObject::FindObject<UFunction>("Function EquipmentShopInterfaceWidget.EquipmentShopInterfaceWidget_C.AddListItem");
 
-	UEquipmentShopInterfaceWidget_C_addListItem_Params params;
+	UEquipmentShopInterfaceWidget_C_AddListItem_Params params;
 	params.ItemID = ItemID;
 	params.Price = Price;
 
@@ -191,9 +191,9 @@ void UEquipmentShopInterfaceWidget_C::Construct()
 // TArray<struct FappartmentEquipment> baseEq                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<float>                  basePrices                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // class AequipmentShop_C*        ParentShopRef                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// TArray<bool>                   unlocked                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<bool>                   Unlocked                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void UEquipmentShopInterfaceWidget_C::Setup(TArray<struct FappartmentEquipment> baseEq, TArray<float> basePrices, class AequipmentShop_C* ParentShopRef, TArray<bool> unlocked)
+void UEquipmentShopInterfaceWidget_C::Setup(TArray<struct FappartmentEquipment> baseEq, TArray<float> basePrices, class AequipmentShop_C* ParentShopRef, TArray<bool> Unlocked)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EquipmentShopInterfaceWidget.EquipmentShopInterfaceWidget_C.Setup");
 
@@ -201,7 +201,7 @@ void UEquipmentShopInterfaceWidget_C::Setup(TArray<struct FappartmentEquipment> 
 	params.baseEq = baseEq;
 	params.basePrices = basePrices;
 	params.ParentShopRef = ParentShopRef;
-	params.unlocked = unlocked;
+	params.Unlocked = Unlocked;
 
 	auto flags = fn->FunctionFlags;
 

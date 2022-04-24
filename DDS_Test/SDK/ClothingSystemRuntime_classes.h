@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,21 +11,6 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Classes
 //---------------------------------------------------------------------------
-
-// Class ClothingSystemRuntime.ClothingAssetCustomData
-// 0x0000 (0x0028 - 0x0028)
-class UClothingAssetCustomData : public UObject
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class ClothingSystemRuntime.ClothingAssetCustomData");
-		return ptr;
-	}
-
-};
-
 
 // Class ClothingSystemRuntime.ClothingAsset
 // 0x0130 (0x0178 - 0x0048)
@@ -85,6 +70,21 @@ public:
 	void SetAnimDriveDamperStiffness(float InStiffness);
 	void EnableGravityOverride(const struct FVector& InVector);
 	void DisableGravityOverride();
+};
+
+
+// Class ClothingSystemRuntime.ClothingAssetCustomData
+// 0x0000 (0x0028 - 0x0028)
+class UClothingAssetCustomData : public UObject
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class ClothingSystemRuntime.ClothingAssetCustomData");
+		return ptr;
+	}
+
 };
 
 

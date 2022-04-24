@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -44,7 +44,7 @@ public:
 	void giveMoney(int Amount);
 	void giveBankMoney(float Amount);
 	void levelUp(int NumLevel);
-	void giveMeExp(float expAmount);
+	void giveMeExp(float ExpAmount);
 	void spawnDrugSource();
 	void disableSubLevelStreaming();
 	void removeDealers();

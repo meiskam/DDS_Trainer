@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -63,10 +63,10 @@ void UappartmentListItem_C::Construct()
 // float                          Meterage                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UTexture2D*              Image                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class UEquipmentShopInterfaceWidget_C* parentRef                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// bool                           selected                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UEquipmentShopInterfaceWidget_C* ParentRef                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// bool                           Selected                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UappartmentListItem_C::Setup(const struct FText& Name, const struct FText& Address, float Meterage, class UTexture2D* Image, int Index, class UEquipmentShopInterfaceWidget_C* parentRef, bool selected)
+void UappartmentListItem_C::Setup(const struct FText& Name, const struct FText& Address, float Meterage, class UTexture2D* Image, int Index, class UEquipmentShopInterfaceWidget_C* ParentRef, bool Selected)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function appartmentListItem.appartmentListItem_C.Setup");
 
@@ -76,8 +76,8 @@ void UappartmentListItem_C::Setup(const struct FText& Name, const struct FText& 
 	params.Meterage = Meterage;
 	params.Image = Image;
 	params.Index = Index;
-	params.parentRef = parentRef;
-	params.selected = selected;
+	params.ParentRef = ParentRef;
+	params.Selected = Selected;
 
 	auto flags = fn->FunctionFlags;
 

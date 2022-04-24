@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -239,14 +239,14 @@ void UworkStationUI_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTim
 }
 
 
-// Function workStationUI.workStationUI_C.reInitialise
+// Function workStationUI.workStationUI_C.reinitialise
 // (BlueprintCallable, BlueprintEvent)
 
-void UworkStationUI_C::reInitialise()
+void UworkStationUI_C::reinitialise()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function workStationUI.workStationUI_C.reInitialise");
+	static auto fn = UObject::FindObject<UFunction>("Function workStationUI.workStationUI_C.reinitialise");
 
-	UworkStationUI_C_reInitialise_Params params;
+	UworkStationUI_C_reinitialise_Params params;
 
 	auto flags = fn->FunctionFlags;
 

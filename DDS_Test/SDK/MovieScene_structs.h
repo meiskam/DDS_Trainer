@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,16 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Enums
 //---------------------------------------------------------------------------
+
+// Enum MovieScene.EMovieSceneBlendType
+enum class EMovieSceneBlendType : uint8_t
+{
+	EMovieSceneBlendType__Absolute = 0,
+	EMovieSceneBlendType__Additive = 1,
+	EMovieSceneBlendType__Relative = 2,
+	EMovieSceneBlendType__EMovieSceneBlendType_MAX = 3
+};
+
 
 // Enum MovieScene.EMovieSceneKeyInterpolation
 enum class EMovieSceneKeyInterpolation : uint8_t
@@ -24,13 +34,12 @@ enum class EMovieSceneKeyInterpolation : uint8_t
 };
 
 
-// Enum MovieScene.EMovieSceneBlendType
-enum class EMovieSceneBlendType : uint8_t
+// Enum MovieScene.EEvaluationMethod
+enum class EEvaluationMethod : uint8_t
 {
-	EMovieSceneBlendType__Absolute = 0,
-	EMovieSceneBlendType__Additive = 1,
-	EMovieSceneBlendType__Relative = 2,
-	EMovieSceneBlendType__EMovieSceneBlendType_MAX = 3
+	EEvaluationMethod__Static      = 0,
+	EEvaluationMethod__Swept       = 1,
+	EEvaluationMethod__EEvaluationMethod_MAX = 2
 };
 
 
@@ -60,25 +69,6 @@ enum class EMovieSceneBuiltInEasing : uint8_t
 	EMovieSceneBuiltInEasing__CircOut = 20,
 	EMovieSceneBuiltInEasing__CircInOut = 21,
 	EMovieSceneBuiltInEasing__EMovieSceneBuiltInEasing_MAX = 22
-};
-
-
-// Enum MovieScene.EEvaluationMethod
-enum class EEvaluationMethod : uint8_t
-{
-	EEvaluationMethod__Static      = 0,
-	EEvaluationMethod__Swept       = 1,
-	EEvaluationMethod__EEvaluationMethod_MAX = 2
-};
-
-
-// Enum MovieScene.EUpdateClockSource
-enum class EUpdateClockSource : uint8_t
-{
-	EUpdateClockSource__Tick       = 0,
-	EUpdateClockSource__Platform   = 1,
-	EUpdateClockSource__Audio      = 2,
-	EUpdateClockSource__EUpdateClockSource_MAX = 3
 };
 
 
@@ -141,6 +131,16 @@ enum class ESpawnOwnership : uint8_t
 	ESpawnOwnership__MasterSequence = 1,
 	ESpawnOwnership__External      = 2,
 	ESpawnOwnership__ESpawnOwnership_MAX = 3
+};
+
+
+// Enum MovieScene.EUpdateClockSource
+enum class EUpdateClockSource : uint8_t
+{
+	EUpdateClockSource__Tick       = 0,
+	EUpdateClockSource__Platform   = 1,
+	EUpdateClockSource__Audio      = 2,
+	EUpdateClockSource__EUpdateClockSource_MAX = 3
 };
 
 
@@ -708,21 +708,6 @@ struct FMovieSceneIntegerChannel : public FMovieSceneChannel
 	unsigned char                                      UnknownData01[0x60];                                      // 0x0030(0x0060) MISSED OFFSET
 };
 
-// ScriptStruct MovieScene.MovieSceneKeyStruct
-// 0x0008
-struct FMovieSceneKeyStruct
-{
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0000(0x0008) MISSED OFFSET
-};
-
-// ScriptStruct MovieScene.MovieSceneKeyTimeStruct
-// 0x0020 (0x0028 - 0x0008)
-struct FMovieSceneKeyTimeStruct : public FMovieSceneKeyStruct
-{
-	struct FFrameNumber                                Time;                                                     // 0x0008(0x0004) (Edit)
-	unsigned char                                      UnknownData00[0x1C];                                      // 0x000C(0x001C) MISSED OFFSET
-};
-
 // ScriptStruct MovieScene.MovieScenePropertySectionData
 // 0x0028
 struct FMovieScenePropertySectionData
@@ -738,6 +723,21 @@ struct FMovieScenePropertySectionData
 struct FMovieScenePropertySectionTemplate : public FMovieSceneEvalTemplate
 {
 	struct FMovieScenePropertySectionData              PropertyData;                                             // 0x0020(0x0028)
+};
+
+// ScriptStruct MovieScene.MovieSceneKeyStruct
+// 0x0008
+struct FMovieSceneKeyStruct
+{
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0000(0x0008) MISSED OFFSET
+};
+
+// ScriptStruct MovieScene.MovieSceneKeyTimeStruct
+// 0x0020 (0x0028 - 0x0008)
+struct FMovieSceneKeyTimeStruct : public FMovieSceneKeyStruct
+{
+	struct FFrameNumber                                Time;                                                     // 0x0008(0x0004) (Edit)
+	unsigned char                                      UnknownData00[0x1C];                                      // 0x000C(0x001C) MISSED OFFSET
 };
 
 // ScriptStruct MovieScene.SectionEvaluationData

@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -37,7 +37,7 @@ struct AblockEntranceLight_C_turnLightOff_Params
 // Function blockEntranceLight.blockEntranceLight_C.ToggleShadows
 struct AblockEntranceLight_C_ToggleShadows_Params
 {
-	bool                                               on;                                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               On;                                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function blockEntranceLight.blockEntranceLight_C.ExecuteUbergraph_blockEntranceLight

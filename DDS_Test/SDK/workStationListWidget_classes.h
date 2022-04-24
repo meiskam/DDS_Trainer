@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,7 +30,7 @@ public:
 	int                                                Quantity;                                                 // 0x0268(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x026C(0x0004) MISSED OFFSET
 	struct FinventoryItemStruct                        InvData;                                                  // 0x0270(0x0108) (Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FappartmentEquipment                        eqData;                                                   // 0x0378(0x0050) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FappartmentEquipment                        EqData;                                                   // 0x0378(0x0050) (Edit, BlueprintVisible, DisableEditOnInstance)
 	int                                                Amount;                                                   // 0x03C8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	struct FGuid                                       InvGuid;                                                  // 0x03CC(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x4];                                       // 0x03DC(0x0004) MISSED OFFSET
@@ -43,7 +43,7 @@ public:
 	}
 
 
-	void Setup(const struct FinventoryItemStruct& InventoryData, const struct FName& EqID, const struct FName& DrugID, const struct FGuid& InventoryGuid, int Quantity, int Amount, bool equipment, const struct FappartmentEquipment& eqData, bool selected, const struct FMixProportionsStruct& MixProportions);
+	void Setup(const struct FinventoryItemStruct& InventoryData, const struct FName& EqID, const struct FName& DrugID, const struct FGuid& InventoryGuid, int Quantity, int Amount, bool Equipment, const struct FappartmentEquipment& EqData, bool Selected, const struct FMixProportionsStruct& MixProportions);
 	void ExecuteUbergraph_workStationListWidget(int EntryPoint);
 };
 

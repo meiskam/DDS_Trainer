@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -190,7 +190,7 @@ public:
 	void questEnded(bool Success, int QuestID);
 	void activateQuest(int QuestID);
 	void addNewQuest(const struct FText& QuestNam, const struct FText& QuestShort, const struct FText& QuestDescription, float QuestExp, int QuestCash, const struct FString& QuestScriptNam);
-	void checkCanAddWidget(bool* ok);
+	void checkCanAddWidget(bool* OK);
 	void playerAvailable(bool* IsAvailable);
 	void checkTaskRelatedMarkers(int TaskID);
 	void checkDisplayNewTask();
@@ -300,7 +300,7 @@ public:
 	void openWeedGate();
 	void closeWeedGate();
 	void displayWeedTutorial();
-	void displayPlantHints(bool indoor);
+	void displayPlantHints(bool Indoor);
 	void eddieCallPsychedelics();
 	void eddieRepeatPsychedelics();
 	void retryEddiePsychedelics();

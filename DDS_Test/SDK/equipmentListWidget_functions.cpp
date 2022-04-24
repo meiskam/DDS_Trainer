@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -59,22 +59,22 @@ void UequipmentListWidget_C::Construct()
 // Function equipmentListWidget.equipmentListWidget_C.Setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FappartmentEquipment    eqData                         (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FappartmentEquipment    EqData                         (BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FName                   EqID                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EVillaListCategories> Category                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Quantity                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           selected                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Selected                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UequipmentListWidget_C::Setup(const struct FappartmentEquipment& eqData, const struct FName& EqID, TEnumAsByte<EVillaListCategories> Category, int Quantity, bool selected)
+void UequipmentListWidget_C::Setup(const struct FappartmentEquipment& EqData, const struct FName& EqID, TEnumAsByte<EVillaListCategories> Category, int Quantity, bool Selected)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function equipmentListWidget.equipmentListWidget_C.Setup");
 
 	UequipmentListWidget_C_Setup_Params params;
-	params.eqData = eqData;
+	params.EqData = EqData;
 	params.EqID = EqID;
 	params.Category = Category;
 	params.Quantity = Quantity;
-	params.selected = selected;
+	params.Selected = Selected;
 
 	auto flags = fn->FunctionFlags;
 

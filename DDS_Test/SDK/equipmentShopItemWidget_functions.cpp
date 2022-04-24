@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -40,11 +40,11 @@ class UWidget* UequipmentShopItemWidget_C::Get_mainHolder_ToolTipWidget_1()
 // struct FName                   EqID                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Price                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class UEquipmentShopInterfaceWidget_C* parentRef                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UEquipmentShopInterfaceWidget_C* ParentRef                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // bool                           checkedOut                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            WaitBoost                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UequipmentShopItemWidget_C::Setup(const struct FName& EqID, float Price, int Index, class UEquipmentShopInterfaceWidget_C* parentRef, bool checkedOut, int WaitBoost)
+void UequipmentShopItemWidget_C::Setup(const struct FName& EqID, float Price, int Index, class UEquipmentShopInterfaceWidget_C* ParentRef, bool checkedOut, int WaitBoost)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function equipmentShopItemWidget.equipmentShopItemWidget_C.Setup");
 
@@ -52,7 +52,7 @@ void UequipmentShopItemWidget_C::Setup(const struct FName& EqID, float Price, in
 	params.EqID = EqID;
 	params.Price = Price;
 	params.Index = Index;
-	params.parentRef = parentRef;
+	params.ParentRef = ParentRef;
 	params.checkedOut = checkedOut;
 	params.WaitBoost = WaitBoost;
 

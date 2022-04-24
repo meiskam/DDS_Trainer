@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -84,14 +84,14 @@ void AblockEntranceLight_C::turnLightOff()
 // Function blockEntranceLight.blockEntranceLight_C.ToggleShadows
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           on                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           On                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AblockEntranceLight_C::ToggleShadows(bool on)
+void AblockEntranceLight_C::ToggleShadows(bool On)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function blockEntranceLight.blockEntranceLight_C.ToggleShadows");
 
 	AblockEntranceLight_C_ToggleShadows_Params params;
-	params.on = on;
+	params.On = On;
 
 	auto flags = fn->FunctionFlags;
 

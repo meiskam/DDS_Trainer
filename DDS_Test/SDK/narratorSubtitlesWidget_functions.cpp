@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,14 +13,14 @@ namespace SDK
 // Functions
 //---------------------------------------------------------------------------
 
-// Function narratorSubtitlesWidget.narratorSubtitlesWidget_C.removeMe
+// Function narratorSubtitlesWidget.narratorSubtitlesWidget_C.RemoveMe
 // (BlueprintCallable, BlueprintEvent)
 
-void UnarratorSubtitlesWidget_C::removeMe()
+void UnarratorSubtitlesWidget_C::RemoveMe()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function narratorSubtitlesWidget.narratorSubtitlesWidget_C.removeMe");
+	static auto fn = UObject::FindObject<UFunction>("Function narratorSubtitlesWidget.narratorSubtitlesWidget_C.RemoveMe");
 
-	UnarratorSubtitlesWidget_C_removeMe_Params params;
+	UnarratorSubtitlesWidget_C_RemoveMe_Params params;
 
 	auto flags = fn->FunctionFlags;
 

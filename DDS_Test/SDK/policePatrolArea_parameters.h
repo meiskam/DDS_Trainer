@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -25,11 +25,11 @@ struct ApolicePatrolArea_C_GetPatrolSpawnChances_Params
 // Function policePatrolArea.policePatrolArea_C.SpawnPatrol
 struct ApolicePatrolArea_C_SpawnPatrol_Params
 {
-	class ApolicePatrolPoint_C*                        spawnPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class ApolicePatrolPoint_C*                        SpawnPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function policePatrolArea.policePatrolArea_C.chooseSpawnPoint
-struct ApolicePatrolArea_C_chooseSpawnPoint_Params
+// Function policePatrolArea.policePatrolArea_C.ChooseSpawnPoint
+struct ApolicePatrolArea_C_ChooseSpawnPoint_Params
 {
 	class ApolicePatrolPoint_C*                        OutPoint;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	bool                                               Succeded;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)

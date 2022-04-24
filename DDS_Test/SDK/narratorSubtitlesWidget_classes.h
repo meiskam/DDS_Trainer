@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -31,7 +31,7 @@ public:
 	}
 
 
-	void removeMe();
+	void RemoveMe();
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 	void Setup(const struct FText& Monologue, float Duration, const struct FText& Name);
 	void Construct();

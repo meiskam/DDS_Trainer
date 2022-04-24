@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -34,7 +34,7 @@ public:
 	void ReceiveBeginPlay();
 	void turnLightOn();
 	void turnLightOff();
-	void ToggleShadows(bool on);
+	void ToggleShadows(bool On);
 	void ExecuteUbergraph_blockEntranceLight(int EntryPoint);
 };
 

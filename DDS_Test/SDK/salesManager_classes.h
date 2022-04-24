@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -132,7 +132,7 @@ public:
 	TArray<int>                                        ArrestedClients;                                          // 0x0828(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	TArray<int>                                        ArrestedDayOver;                                          // 0x0838(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	TArray<bool>                                       ArrestedHasBail;                                          // 0x0848(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	class AdayTimeControler_C*                         daytimeManager;                                           // 0x0858(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
+	class AdayTimeControler_C*                         DayTimeManager;                                           // 0x0858(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
 	float                                              WeekendOrderIntervalMultiplier;                           // 0x0860(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData10[0x4];                                       // 0x0864(0x0004) MISSED OFFSET
 	TArray<struct FText>                               ArrestedDisplayPool;                                      // 0x0868(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
@@ -151,7 +151,7 @@ public:
 	void CalcArrestBail(int ArrestedIndex, int* OutBailAmount);
 	void CheckArrestReleases();
 	void TryDepositCashToSafe(int Amount, const struct FString& AreaID, bool* Success);
-	void AddDealerExp(int ClientId, int SaleQuantity, float expAmount);
+	void AddDealerExp(int ClientId, int SaleQuantity, float ExpAmount);
 	void GetClientMeta(int ClientId, bool* ClientFound, struct FClientMeta* OutMeta);
 	void ReleaseClient(int ClientId);
 	void GetClientArrestChance(int ClientId, float* OutChance);
@@ -164,7 +164,7 @@ public:
 	void countAddictedClients(int* ClientCount);
 	void countMaxDealers(int ClientId, bool* CanHaveMore);
 	void adaptDifficulty();
-	void generateClientMessage(bool dealer, bool CashMeet, int Quantity, const struct FText& DrugNam, bool priceHigh, struct FText* Message);
+	void generateClientMessage(bool Dealer, bool CashMeet, int Quantity, const struct FText& DrugNam, bool priceHigh, struct FText* Message);
 	void recalcClientCount();
 	void tryDisplayClientState();
 	void displayClientAddictedPopup(int ClientId);
@@ -178,8 +178,8 @@ public:
 	void badSaleResponse(bool ClientLost, int ClientId);
 	void sendDealerOffer(int ClientId);
 	bool dealerOfferChance(int ClientId);
-	void odMessageResponse(bool dealer, int ClientId);
-	void showODPopup(bool dealer, int ClientId);
+	void odMessageResponse(bool Dealer, int ClientId);
+	void showODPopup(bool Dealer, int ClientId);
 	void addStatsOD();
 	void selectDrugID(int ClientId, int* DrugID);
 	void timeShift(float TimeShiftHours, float TimeShiftMinutes);
@@ -189,7 +189,7 @@ public:
 	void getOrderedDrugIndex(int RandomIndex, int* OutIndex);
 	void refreshAvailableDrugs(int ClientId, bool* DrugsAreAvailable);
 	void countClientStatistics();
-	void calcOrderQuantity(int inClientID, bool nightTime, bool priceHigh, int DrugID, int* OutQuantity, bool* Critical);
+	void calcOrderQuantity(int inClientID, bool nightTime, bool priceHigh, int DrugID, int* outQuantity, bool* Critical);
 	void clientSendNewOrder(int ClientId, bool nightTime);
 	void clientOrderCountdown(float Delta);
 	void generateNewClient(bool Force);
@@ -204,7 +204,7 @@ public:
 	void AddArrestClients(int Count);
 	void AddArrestScreen();
 	void DealerLeveledUp(int NewLevel);
-	void AllDealersAddExp(float expAmount);
+	void AllDealersAddExp(float ExpAmount);
 	void DealerGotArrested();
 	void DisplayArrestPopup();
 	void ForceReleaseAllClients();

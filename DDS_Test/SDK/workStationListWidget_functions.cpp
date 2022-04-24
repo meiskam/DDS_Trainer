@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -22,12 +22,12 @@ namespace SDK
 // struct FGuid                   InventoryGuid                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Quantity                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Amount                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           equipment                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FappartmentEquipment    eqData                         (BlueprintVisible, BlueprintReadOnly, Parm)
-// bool                           selected                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Equipment                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FappartmentEquipment    EqData                         (BlueprintVisible, BlueprintReadOnly, Parm)
+// bool                           Selected                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FMixProportionsStruct   MixProportions                 (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UworkStationListWidget_C::Setup(const struct FinventoryItemStruct& InventoryData, const struct FName& EqID, const struct FName& DrugID, const struct FGuid& InventoryGuid, int Quantity, int Amount, bool equipment, const struct FappartmentEquipment& eqData, bool selected, const struct FMixProportionsStruct& MixProportions)
+void UworkStationListWidget_C::Setup(const struct FinventoryItemStruct& InventoryData, const struct FName& EqID, const struct FName& DrugID, const struct FGuid& InventoryGuid, int Quantity, int Amount, bool Equipment, const struct FappartmentEquipment& EqData, bool Selected, const struct FMixProportionsStruct& MixProportions)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function workStationListWidget.workStationListWidget_C.Setup");
 
@@ -38,9 +38,9 @@ void UworkStationListWidget_C::Setup(const struct FinventoryItemStruct& Inventor
 	params.InventoryGuid = InventoryGuid;
 	params.Quantity = Quantity;
 	params.Amount = Amount;
-	params.equipment = equipment;
-	params.eqData = eqData;
-	params.selected = selected;
+	params.Equipment = Equipment;
+	params.EqData = EqData;
+	params.Selected = Selected;
 	params.MixProportions = MixProportions;
 
 	auto flags = fn->FunctionFlags;

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -75,7 +75,7 @@ public:
 	TArray<int>                                        ExpoSalesDay;                                             // 0x0418(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	TArray<int>                                        ExpoSalesAmount;                                          // 0x0428(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	TArray<bool>                                       ExpoSalesNight;                                           // 0x0438(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	class AdayTimeControler_C*                         dayTimeCon;                                               // 0x0448(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
+	class AdayTimeControler_C*                         DayTimeCon;                                               // 0x0448(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
 	TArray<int>                                        ExpoEventsDay;                                            // 0x0450(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	TArray<struct FName>                               ExpoEventName;                                            // 0x0460(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	TArray<bool>                                       ExpoEventNight;                                           // 0x0470(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
@@ -105,7 +105,7 @@ public:
 	void factorTimeDrop(float Delta);
 	void addExpoEvent(float ExpoValue);
 	void addRiskEvent(float RiskValue);
-	void addExp(float expAmount);
+	void addExp(float ExpAmount);
 	void calcExpForLevelUp(float* ExpLacking, float* ExpNeededTotal, float* NextLevelProgress);
 	void UserConstructionScript();
 	void ReceiveBeginPlay();

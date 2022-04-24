@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -156,16 +156,16 @@ void UshadyCommInterface_C::determineSector(const struct FString& AreaNam, int* 
 // Parameters:
 // bool                           Show                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FString                 AreaString                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
-// bool                           unlocked                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Unlocked                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UshadyCommInterface_C::toggleAreaDetails(bool Show, const struct FString& AreaString, bool unlocked)
+void UshadyCommInterface_C::toggleAreaDetails(bool Show, const struct FString& AreaString, bool Unlocked)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function shadyCommInterface.shadyCommInterface_C.toggleAreaDetails");
 
 	UshadyCommInterface_C_toggleAreaDetails_Params params;
 	params.Show = Show;
 	params.AreaString = AreaString;
-	params.unlocked = unlocked;
+	params.Unlocked = Unlocked;
 
 	auto flags = fn->FunctionFlags;
 
@@ -195,14 +195,14 @@ void UshadyCommInterface_C::spawnSeedGuy()
 // Function shadyCommInterface.shadyCommInterface_C.checkUserResetReadMessages
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            userID                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int                            UserID                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UshadyCommInterface_C::checkUserResetReadMessages(int userID)
+void UshadyCommInterface_C::checkUserResetReadMessages(int UserID)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function shadyCommInterface.shadyCommInterface_C.checkUserResetReadMessages");
 
 	UshadyCommInterface_C_checkUserResetReadMessages_Params params;
-	params.userID = userID;
+	params.UserID = UserID;
 
 	auto flags = fn->FunctionFlags;
 
@@ -549,17 +549,17 @@ void UshadyCommInterface_C::clearNewMessages()
 // Function shadyCommInterface.shadyCommInterface_C.findSalePointByAreaID
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FString                 stringID                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+// struct FString                 StringID                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // struct FVector                 Location                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // class ADrugSalePoint_C*        SalePoint                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                Rotation                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UshadyCommInterface_C::findSalePointByAreaID(const struct FString& stringID, struct FVector* Location, class ADrugSalePoint_C** SalePoint, struct FRotator* Rotation)
+void UshadyCommInterface_C::findSalePointByAreaID(const struct FString& StringID, struct FVector* Location, class ADrugSalePoint_C** SalePoint, struct FRotator* Rotation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function shadyCommInterface.shadyCommInterface_C.findSalePointByAreaID");
 
 	UshadyCommInterface_C_findSalePointByAreaID_Params params;
-	params.stringID = stringID;
+	params.StringID = StringID;
 
 	auto flags = fn->FunctionFlags;
 
@@ -580,15 +580,15 @@ void UshadyCommInterface_C::findSalePointByAreaID(const struct FString& stringID
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AsalesManager_C*         SaleManager                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// int                            orderID                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int                            OrderId                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UshadyCommInterface_C::spawnClientOnMap(class AsalesManager_C* SaleManager, int orderID)
+void UshadyCommInterface_C::spawnClientOnMap(class AsalesManager_C* SaleManager, int OrderId)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function shadyCommInterface.shadyCommInterface_C.spawnClientOnMap");
 
 	UshadyCommInterface_C_spawnClientOnMap_Params params;
 	params.SaleManager = SaleManager;
-	params.orderID = orderID;
+	params.OrderId = OrderId;
 
 	auto flags = fn->FunctionFlags;
 
@@ -735,14 +735,14 @@ void UshadyCommInterface_C::renderPriceList()
 // Function shadyCommInterface.shadyCommInterface_C.renderMessages
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            userID                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int                            UserID                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UshadyCommInterface_C::renderMessages(int userID)
+void UshadyCommInterface_C::renderMessages(int UserID)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function shadyCommInterface.shadyCommInterface_C.renderMessages");
 
 	UshadyCommInterface_C_renderMessages_Params params;
-	params.userID = userID;
+	params.UserID = UserID;
 
 	auto flags = fn->FunctionFlags;
 
@@ -831,14 +831,14 @@ void UshadyCommInterface_C::Tick(const struct FGeometry& MyGeometry, float InDel
 // Function shadyCommInterface.shadyCommInterface_C.Setup
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AmainComputer_C*         parentRef                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AmainComputer_C*         ParentRef                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UshadyCommInterface_C::Setup(class AmainComputer_C* parentRef)
+void UshadyCommInterface_C::Setup(class AmainComputer_C* ParentRef)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function shadyCommInterface.shadyCommInterface_C.Setup");
 
 	UshadyCommInterface_C_Setup_Params params;
-	params.parentRef = parentRef;
+	params.ParentRef = ParentRef;
 
 	auto flags = fn->FunctionFlags;
 

@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,7 +17,7 @@ namespace SDK
 // Function interactiveBaseObject.interactiveBaseObject_C.VerifyBaseSizing
 struct AinteractiveBaseObject_C_VerifyBaseSizing_Params
 {
-	bool                                               ok;                                                       // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               OK;                                                       // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function interactiveBaseObject.interactiveBaseObject_C.GetEquipmentMeta

@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -429,14 +429,14 @@ void UmainMenuWidget_C::BndEvt__btnLoadGame_K2Node_ComponentBoundEvent_4_OnButto
 // Function mainMenuWidget.mainMenuWidget_C.startNewGame
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TEnumAsByte<EdifficultyLevels> chosenDifficulty               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EdifficultyLevels> ChosenDifficulty               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UmainMenuWidget_C::startNewGame(TEnumAsByte<EdifficultyLevels> chosenDifficulty)
+void UmainMenuWidget_C::startNewGame(TEnumAsByte<EdifficultyLevels> ChosenDifficulty)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function mainMenuWidget.mainMenuWidget_C.startNewGame");
 
 	UmainMenuWidget_C_startNewGame_Params params;
-	params.chosenDifficulty = chosenDifficulty;
+	params.ChosenDifficulty = ChosenDifficulty;
 
 	auto flags = fn->FunctionFlags;
 

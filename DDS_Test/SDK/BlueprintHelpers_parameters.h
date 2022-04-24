@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -25,7 +25,7 @@ struct UBlueprintHelpers_C_DrugFormToText_Params
 // Function BlueprintHelpers.BlueprintHelpers_C.GetHourTimestamp
 struct UBlueprintHelpers_C_GetHourTimestamp_Params
 {
-	class AdayTimeControler_C*                         dayTimeCon;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AdayTimeControler_C*                         DayTimeCon;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	class UObject*                                     __WorldContext;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	int                                                IntTimestamp;                                             // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
@@ -116,7 +116,7 @@ struct UBlueprintHelpers_C_GetBalanceFlag_Params
 // Function BlueprintHelpers.BlueprintHelpers_C.StringIDToSubstanceName
 struct UBlueprintHelpers_C_StringIDToSubstanceName_Params
 {
-	struct FString                                     stringID;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+	struct FString                                     StringID;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 	class UObject*                                     __WorldContext;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               Found;                                                    // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	struct FName                                       OutSubstanceName;                                         // (Parm, OutParm, ZeroConstructor, IsPlainOldData)

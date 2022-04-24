@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -64371,6 +64371,66 @@ bool UProjectileMovementComponent::IsInterpolationComplete()
 }
 
 
+// Function Engine.RadialForceComponent.RemoveObjectTypeToAffect
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// TEnumAsByte<EObjectTypeQuery>  ObjectType                     (Parm, ZeroConstructor, IsPlainOldData)
+
+void URadialForceComponent::RemoveObjectTypeToAffect(TEnumAsByte<EObjectTypeQuery> ObjectType)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.RadialForceComponent.RemoveObjectTypeToAffect");
+
+	URadialForceComponent_RemoveObjectTypeToAffect_Params params;
+	params.ObjectType = ObjectType;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.RadialForceComponent.FireImpulse
+// (Native, Public, BlueprintCallable)
+
+void URadialForceComponent::FireImpulse()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.RadialForceComponent.FireImpulse");
+
+	URadialForceComponent_FireImpulse_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.RadialForceComponent.AddObjectTypeToAffect
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// TEnumAsByte<EObjectTypeQuery>  ObjectType                     (Parm, ZeroConstructor, IsPlainOldData)
+
+void URadialForceComponent::AddObjectTypeToAffect(TEnumAsByte<EObjectTypeQuery> ObjectType)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.RadialForceComponent.AddObjectTypeToAffect");
+
+	URadialForceComponent_AddObjectTypeToAffect_Params params;
+	params.ObjectType = ObjectType;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Engine.RadialForceActor.ToggleForce
 // (Native, Public, BlueprintCallable)
 
@@ -64433,66 +64493,6 @@ void ARadialForceActor::DisableForce()
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.RadialForceActor.DisableForce");
 
 	ARadialForceActor_DisableForce_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.RadialForceComponent.RemoveObjectTypeToAffect
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// TEnumAsByte<EObjectTypeQuery>  ObjectType                     (Parm, ZeroConstructor, IsPlainOldData)
-
-void URadialForceComponent::RemoveObjectTypeToAffect(TEnumAsByte<EObjectTypeQuery> ObjectType)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.RadialForceComponent.RemoveObjectTypeToAffect");
-
-	URadialForceComponent_RemoveObjectTypeToAffect_Params params;
-	params.ObjectType = ObjectType;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.RadialForceComponent.FireImpulse
-// (Native, Public, BlueprintCallable)
-
-void URadialForceComponent::FireImpulse()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.RadialForceComponent.FireImpulse");
-
-	URadialForceComponent_FireImpulse_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.RadialForceComponent.AddObjectTypeToAffect
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// TEnumAsByte<EObjectTypeQuery>  ObjectType                     (Parm, ZeroConstructor, IsPlainOldData)
-
-void URadialForceComponent::AddObjectTypeToAffect(TEnumAsByte<EObjectTypeQuery> ObjectType)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.RadialForceComponent.AddObjectTypeToAffect");
-
-	URadialForceComponent_AddObjectTypeToAffect_Params params;
-	params.ObjectType = ObjectType;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -64636,6 +64636,78 @@ void ASceneCaptureCube::OnInterpToggle(bool bEnable)
 
 	ASceneCaptureCube_OnInterpToggle_Params params;
 	params.bEnable = bEnable;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.SkeletalMeshActor.OnRep_ReplicatedPhysAsset
+// (Native, Public)
+
+void ASkeletalMeshActor::OnRep_ReplicatedPhysAsset()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.SkeletalMeshActor.OnRep_ReplicatedPhysAsset");
+
+	ASkeletalMeshActor_OnRep_ReplicatedPhysAsset_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.SkeletalMeshActor.OnRep_ReplicatedMesh
+// (Native, Public)
+
+void ASkeletalMeshActor::OnRep_ReplicatedMesh()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.SkeletalMeshActor.OnRep_ReplicatedMesh");
+
+	ASkeletalMeshActor_OnRep_ReplicatedMesh_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.SkeletalMeshActor.OnRep_ReplicatedMaterial1
+// (Native, Public)
+
+void ASkeletalMeshActor::OnRep_ReplicatedMaterial1()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.SkeletalMeshActor.OnRep_ReplicatedMaterial1");
+
+	ASkeletalMeshActor_OnRep_ReplicatedMaterial1_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.SkeletalMeshActor.OnRep_ReplicatedMaterial0
+// (Native, Public)
+
+void ASkeletalMeshActor::OnRep_ReplicatedMaterial0()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.SkeletalMeshActor.OnRep_ReplicatedMaterial0");
+
+	ASkeletalMeshActor_OnRep_ReplicatedMaterial0_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -64859,78 +64931,6 @@ class USkeletalMeshSocket* USkeletalMesh::FindSocket(const struct FName& InSocke
 }
 
 
-// Function Engine.SkeletalMeshActor.OnRep_ReplicatedPhysAsset
-// (Native, Public)
-
-void ASkeletalMeshActor::OnRep_ReplicatedPhysAsset()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.SkeletalMeshActor.OnRep_ReplicatedPhysAsset");
-
-	ASkeletalMeshActor_OnRep_ReplicatedPhysAsset_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.SkeletalMeshActor.OnRep_ReplicatedMesh
-// (Native, Public)
-
-void ASkeletalMeshActor::OnRep_ReplicatedMesh()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.SkeletalMeshActor.OnRep_ReplicatedMesh");
-
-	ASkeletalMeshActor_OnRep_ReplicatedMesh_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.SkeletalMeshActor.OnRep_ReplicatedMaterial1
-// (Native, Public)
-
-void ASkeletalMeshActor::OnRep_ReplicatedMaterial1()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.SkeletalMeshActor.OnRep_ReplicatedMaterial1");
-
-	ASkeletalMeshActor_OnRep_ReplicatedMaterial1_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.SkeletalMeshActor.OnRep_ReplicatedMaterial0
-// (Native, Public)
-
-void ASkeletalMeshActor::OnRep_ReplicatedMaterial0()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.SkeletalMeshActor.OnRep_ReplicatedMaterial0");
-
-	ASkeletalMeshActor_OnRep_ReplicatedMaterial0_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Engine.SkeletalMeshSocket.InitializeSocketFromLocation
 // (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
@@ -64977,24 +64977,6 @@ struct FVector USkeletalMeshSocket::GetSocketLocation(class USkeletalMeshCompone
 	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
-}
-
-
-// Function Engine.SkyLight.OnRep_bEnabled
-// (Native, Public)
-
-void ASkyLight::OnRep_bEnabled()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.SkyLight.OnRep_bEnabled");
-
-	ASkyLight_OnRep_bEnabled_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -65241,6 +65223,24 @@ void USkyLightComponent::RecaptureSky()
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SkyLightComponent.RecaptureSky");
 
 	USkyLightComponent_RecaptureSky_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.SkyLight.OnRep_bEnabled
+// (Native, Public)
+
+void ASkyLight::OnRep_bEnabled()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.SkyLight.OnRep_bEnabled");
+
+	ASkyLight_OnRep_bEnabled_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;

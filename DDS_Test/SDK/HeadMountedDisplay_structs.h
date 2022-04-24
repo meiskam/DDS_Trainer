@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -59,16 +59,6 @@ enum class EHMDTrackingOrigin : uint8_t
 };
 
 
-// Enum HeadMountedDisplay.EOrientPositionSelector
-enum class EOrientPositionSelector : uint8_t
-{
-	EOrientPositionSelector__Orientation = 0,
-	EOrientPositionSelector__Position = 1,
-	EOrientPositionSelector__OrientationAndPosition = 2,
-	EOrientPositionSelector__EOrientPositionSelector_MAX = 3
-};
-
-
 // Enum HeadMountedDisplay.ETrackingStatus
 enum class ETrackingStatus : uint8_t
 {
@@ -76,6 +66,16 @@ enum class ETrackingStatus : uint8_t
 	ETrackingStatus__InertialOnly  = 1,
 	ETrackingStatus__Tracked       = 2,
 	ETrackingStatus__ETrackingStatus_MAX = 3
+};
+
+
+// Enum HeadMountedDisplay.EOrientPositionSelector
+enum class EOrientPositionSelector : uint8_t
+{
+	EOrientPositionSelector__Orientation = 0,
+	EOrientPositionSelector__Position = 1,
+	EOrientPositionSelector__OrientationAndPosition = 2,
+	EOrientPositionSelector__EOrientPositionSelector_MAX = 3
 };
 
 

@@ -1,9 +1,9 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
-#pragma pack(push, 0x8)
+	#pragma pack(push, 0x8)
 #endif
 
 namespace SDK
@@ -39,5 +39,5 @@ namespace SDK
 }
 
 #ifdef _MSC_VER
-#pragma pack(pop)
+	#pragma pack(pop)
 #endif

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -22,14 +22,14 @@ public:
 	class UWidgetComponent*                            progressWidget;                                           // 0x0438(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	class UWidgetComponent*                            selectionWidget;                                          // 0x0440(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	class UBoxComponent*                               baseGizmo;                                                // 0x0448(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	struct FappartmentEquipment                        eqData_1;                                                 // 0x0450(0x0050) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FappartmentEquipment                        EqData_1;                                                 // 0x0450(0x0050) (Edit, BlueprintVisible, DisableEditOnInstance)
 	bool                                               isGizmo_1;                                                // 0x04A0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x04A1(0x0003) MISSED OFFSET
 	struct FVector2D                                   baseSizing;                                               // 0x04A4(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               canFit;                                                   // 0x04AC(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x3];                                       // 0x04AD(0x0003) MISSED OFFSET
 	TArray<struct FVector>                             lineTracePoints;                                          // 0x04B0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	bool                                               FromHovered;                                              // 0x04C0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               fromHovered;                                              // 0x04C0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               isWorking;                                                // 0x04C1(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               isOccupied;                                               // 0x04C2(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               isSelected;                                               // 0x04C3(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
@@ -48,7 +48,7 @@ public:
 	struct FText                                       childNameStorage;                                         // 0x0500(0x0018) (Edit, BlueprintVisible, DisableEditOnInstance)
 	struct FdrugData                                   initialSubstanceData;                                     // 0x0518(0x00B0) (Edit, BlueprintVisible, DisableEditOnInstance)
 	struct FMixProportionsStruct                       InitialSubstanceMixProp;                                  // 0x05C8(0x0040) (Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FdrugData                                   FinalProduct;                                             // 0x0608(0x00B0) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FdrugData                                   finalProduct;                                             // 0x0608(0x00B0) (Edit, BlueprintVisible, DisableEditOnInstance)
 	struct FMixProportionsStruct                       FinalProductMixProp;                                      // 0x06B8(0x0040) (Edit, BlueprintVisible, DisableEditOnInstance)
 	float                                              finalProductAmount;                                       // 0x06F8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              potentialLossPercentMinimum;                              // 0x06FC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
@@ -65,7 +65,7 @@ public:
 
 
 	void RamaExpand();
-	void GetHeldSubstanceID(bool FinalProduct, struct FName* OutSubstanceID);
+	void GetHeldSubstanceID(bool finalProduct, struct FName* OutSubstanceID);
 	void HandleRama();
 	void packagePopup();
 	void packageProduct();
@@ -75,7 +75,7 @@ public:
 	void compareContent(const struct FdrugData& NewData, const struct FMixProportionsStruct& MixProportions, bool* TheSame, bool* NameMissmatch);
 	void clearEquipment();
 	void quantityChanged();
-	void addSubstancePopup(class AinteractiveBaseObject_C* substanceRef);
+	void addSubstancePopup(class AinteractiveBaseObject_C* SubstanceRef);
 	void workFinished();
 	void workCountdown(float Delta);
 	void startWorking();
@@ -90,7 +90,7 @@ public:
 	void UserConstructionScript();
 	void ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);
-	void initialSetup(const struct FappartmentEquipment& Data, bool Gizmo, bool FromHovered);
+	void initialSetup(const struct FappartmentEquipment& Data, bool Gizmo, bool fromHovered);
 	void verifyCorrectNaming();
 	void selectMe();
 	void dumpContent();

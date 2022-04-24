@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -159,7 +159,7 @@ public:
 	void renderBuyerNeeded();
 	void checkItemsFitPockets(class AplayerCharacterBP_C* PlayerRef, bool* NoFit);
 	void countTradeItemSizing(float* TotalSize, float* TotalWieght);
-	void countItemValue(int* totalValue);
+	void countItemValue(int* TotalValue);
 	void clearTradeItems();
 	void renderShopItems(class AbaseNPC_C* sellerRef);
 	void renderContainer(class AcontainerBase_C* container);

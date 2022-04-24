@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -33,15 +33,15 @@ void AworkStationEquipmentBase_C::RamaExpand()
 // Function workStationEquipmentBase.workStationEquipmentBase_C.GetHeldSubstanceID
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           FinalProduct                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           finalProduct                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   OutSubstanceID                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AworkStationEquipmentBase_C::GetHeldSubstanceID(bool FinalProduct, struct FName* OutSubstanceID)
+void AworkStationEquipmentBase_C::GetHeldSubstanceID(bool finalProduct, struct FName* OutSubstanceID)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function workStationEquipmentBase.workStationEquipmentBase_C.GetHeldSubstanceID");
 
 	AworkStationEquipmentBase_C_GetHeldSubstanceID_Params params;
-	params.FinalProduct = FinalProduct;
+	params.finalProduct = finalProduct;
 
 	auto flags = fn->FunctionFlags;
 
@@ -236,14 +236,14 @@ void AworkStationEquipmentBase_C::quantityChanged()
 // Function workStationEquipmentBase.workStationEquipmentBase_C.addSubstancePopup
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AinteractiveBaseObject_C* substanceRef                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AinteractiveBaseObject_C* SubstanceRef                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AworkStationEquipmentBase_C::addSubstancePopup(class AinteractiveBaseObject_C* substanceRef)
+void AworkStationEquipmentBase_C::addSubstancePopup(class AinteractiveBaseObject_C* SubstanceRef)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function workStationEquipmentBase.workStationEquipmentBase_C.addSubstancePopup");
 
 	AworkStationEquipmentBase_C_addSubstancePopup_Params params;
-	params.substanceRef = substanceRef;
+	params.SubstanceRef = SubstanceRef;
 
 	auto flags = fn->FunctionFlags;
 
@@ -510,16 +510,16 @@ void AworkStationEquipmentBase_C::ReceiveTick(float DeltaSeconds)
 // Parameters:
 // struct FappartmentEquipment    Data                           (BlueprintVisible, BlueprintReadOnly, Parm)
 // bool                           Gizmo                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           FromHovered                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           fromHovered                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AworkStationEquipmentBase_C::initialSetup(const struct FappartmentEquipment& Data, bool Gizmo, bool FromHovered)
+void AworkStationEquipmentBase_C::initialSetup(const struct FappartmentEquipment& Data, bool Gizmo, bool fromHovered)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function workStationEquipmentBase.workStationEquipmentBase_C.initialSetup");
 
 	AworkStationEquipmentBase_C_initialSetup_Params params;
 	params.Data = Data;
 	params.Gizmo = Gizmo;
-	params.FromHovered = FromHovered;
+	params.fromHovered = fromHovered;
 
 	auto flags = fn->FunctionFlags;
 

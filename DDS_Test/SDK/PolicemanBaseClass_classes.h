@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -98,7 +98,7 @@ public:
 	void CheckCanReachPlayer(bool* CanReach);
 	void adaptDifficulty();
 	void checkCanSpotPlayer(bool* canSpot);
-	void checkBallenaProtection(bool* protectedBy);
+	void checkBallenaProtection(bool* Protected);
 	void checkPlayerRunning(float Delta);
 	void finishChasing(bool stayAlerted);
 	void checkChasingPolicemen();
@@ -126,7 +126,7 @@ public:
 	void EndChase(bool stayAlerted, bool cancelAllChasers);
 	void ReangageChase();
 	void walkSpeedCheck();
-	void removeMe();
+	void RemoveMe();
 	void forceSuspect();
 	void despawnPatrol();
 	void tryDespawn();

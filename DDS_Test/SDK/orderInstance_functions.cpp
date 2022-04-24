@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -88,15 +88,15 @@ void AorderInstance_C::constructOrderSMS(TArray<struct FText>* MessageTemplates,
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            leftToDivide                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FText                   PackageName                    (Parm, OutParm)
-// int                            PackageQuantity                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// float                          PackageSize                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// float                          PackageWeight                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// int                            packageQuantity                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float                          packageSize                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float                          packageWeight                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // int                            restLeft                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // int                            gramsPerPack                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // class UTexture2D*              packageIcon                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // class UClass*                  ObjectClass                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AorderInstance_C::calcPackagingPattern(const struct FdrugData& drugData, int Index, int leftToDivide, struct FText* PackageName, int* PackageQuantity, float* PackageSize, float* PackageWeight, int* restLeft, int* gramsPerPack, class UTexture2D** packageIcon, class UClass** ObjectClass)
+void AorderInstance_C::calcPackagingPattern(const struct FdrugData& drugData, int Index, int leftToDivide, struct FText* PackageName, int* packageQuantity, float* packageSize, float* packageWeight, int* restLeft, int* gramsPerPack, class UTexture2D** packageIcon, class UClass** ObjectClass)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function orderInstance.orderInstance_C.calcPackagingPattern");
 
@@ -113,12 +113,12 @@ void AorderInstance_C::calcPackagingPattern(const struct FdrugData& drugData, in
 
 	if (PackageName != nullptr)
 		*PackageName = params.PackageName;
-	if (PackageQuantity != nullptr)
-		*PackageQuantity = params.PackageQuantity;
-	if (PackageSize != nullptr)
-		*PackageSize = params.PackageSize;
-	if (PackageWeight != nullptr)
-		*PackageWeight = params.PackageWeight;
+	if (packageQuantity != nullptr)
+		*packageQuantity = params.packageQuantity;
+	if (packageSize != nullptr)
+		*packageSize = params.packageSize;
+	if (packageWeight != nullptr)
+		*packageWeight = params.packageWeight;
 	if (restLeft != nullptr)
 		*restLeft = params.restLeft;
 	if (gramsPerPack != nullptr)
@@ -135,11 +135,11 @@ void AorderInstance_C::calcPackagingPattern(const struct FdrugData& drugData, in
 // Parameters:
 // TArray<struct FinventoryItemStruct> OutInventory                   (Parm, OutParm, ZeroConstructor)
 // TArray<struct FName>           OutIDs                         (Parm, OutParm, ZeroConstructor)
-// TArray<int>                    OutQuantity                    (Parm, OutParm, ZeroConstructor)
+// TArray<int>                    outQuantity                    (Parm, OutParm, ZeroConstructor)
 // TArray<int>                    OutAmounts                     (Parm, OutParm, ZeroConstructor)
 // TArray<struct FMixProportionsStruct> OutMixProportions              (Parm, OutParm, ZeroConstructor)
 
-void AorderInstance_C::generatePackageContents(TArray<struct FinventoryItemStruct>* OutInventory, TArray<struct FName>* OutIDs, TArray<int>* OutQuantity, TArray<int>* OutAmounts, TArray<struct FMixProportionsStruct>* OutMixProportions)
+void AorderInstance_C::generatePackageContents(TArray<struct FinventoryItemStruct>* OutInventory, TArray<struct FName>* OutIDs, TArray<int>* outQuantity, TArray<int>* OutAmounts, TArray<struct FMixProportionsStruct>* OutMixProportions)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function orderInstance.orderInstance_C.generatePackageContents");
 
@@ -155,8 +155,8 @@ void AorderInstance_C::generatePackageContents(TArray<struct FinventoryItemStruc
 		*OutInventory = params.OutInventory;
 	if (OutIDs != nullptr)
 		*OutIDs = params.OutIDs;
-	if (OutQuantity != nullptr)
-		*OutQuantity = params.OutQuantity;
+	if (outQuantity != nullptr)
+		*outQuantity = params.outQuantity;
 	if (OutAmounts != nullptr)
 		*OutAmounts = params.OutAmounts;
 	if (OutMixProportions != nullptr)
@@ -321,11 +321,11 @@ void AorderInstance_C::ReceiveTick(float DeltaSeconds)
 // Parameters:
 // TArray<struct FdrugData>       drugData                       (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FName>           DrugIDs                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<int>                    DrugQuantities                 (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<int>                    drugQuantities                 (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // int                            ID                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          spawnTime                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AorderInstance_C::SetupOrder(TArray<struct FName> DrugIDs, int ID, float spawnTime, TArray<struct FdrugData>* drugData, TArray<int>* DrugQuantities)
+void AorderInstance_C::SetupOrder(TArray<struct FName> DrugIDs, int ID, float spawnTime, TArray<struct FdrugData>* drugData, TArray<int>* drugQuantities)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function orderInstance.orderInstance_C.SetupOrder");
 
@@ -342,8 +342,8 @@ void AorderInstance_C::SetupOrder(TArray<struct FName> DrugIDs, int ID, float sp
 
 	if (drugData != nullptr)
 		*drugData = params.drugData;
-	if (DrugQuantities != nullptr)
-		*DrugQuantities = params.DrugQuantities;
+	if (drugQuantities != nullptr)
+		*drugQuantities = params.drugQuantities;
 }
 
 

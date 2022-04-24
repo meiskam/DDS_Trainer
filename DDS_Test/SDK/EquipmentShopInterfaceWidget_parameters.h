@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,7 +17,7 @@ namespace SDK
 // Function EquipmentShopInterfaceWidget.EquipmentShopInterfaceWidget_C.checkAvailableApartments
 struct UEquipmentShopInterfaceWidget_C_checkAvailableApartments_Params
 {
-	bool                                               ok;                                                       // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               OK;                                                       // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function EquipmentShopInterfaceWidget.EquipmentShopInterfaceWidget_C.updateBalance
@@ -51,8 +51,8 @@ struct UEquipmentShopInterfaceWidget_C_recalcCheckout_Params
 {
 };
 
-// Function EquipmentShopInterfaceWidget.EquipmentShopInterfaceWidget_C.addListItem
-struct UEquipmentShopInterfaceWidget_C_addListItem_Params
+// Function EquipmentShopInterfaceWidget.EquipmentShopInterfaceWidget_C.AddListItem
+struct UEquipmentShopInterfaceWidget_C_AddListItem_Params
 {
 	struct FName                                       ItemID;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Price;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -70,7 +70,7 @@ struct UEquipmentShopInterfaceWidget_C_Setup_Params
 	TArray<struct FappartmentEquipment>                baseEq;                                                   // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 	TArray<float>                                      basePrices;                                               // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 	class AequipmentShop_C*                            ParentShopRef;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	TArray<bool>                                       unlocked;                                                 // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+	TArray<bool>                                       Unlocked;                                                 // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 };
 
 // Function EquipmentShopInterfaceWidget.EquipmentShopInterfaceWidget_C.BndEvt__btnOrderPay_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature

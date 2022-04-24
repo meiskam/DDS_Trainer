@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -18,17 +18,17 @@ namespace SDK
 // Parameters:
 // struct FText                   DialogueText                   (BlueprintVisible, BlueprintReadOnly, Parm)
 // int                            responseID                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// class UdialogueWidget_C*       parentRef                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UdialogueWidget_C*       ParentRef                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // struct FdialogueResponseData   responseData                   (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UdialogueResponseWidget_C::Setup(const struct FText& DialogueText, int responseID, class UdialogueWidget_C* parentRef, const struct FdialogueResponseData& responseData)
+void UdialogueResponseWidget_C::Setup(const struct FText& DialogueText, int responseID, class UdialogueWidget_C* ParentRef, const struct FdialogueResponseData& responseData)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function dialogueResponseWidget.dialogueResponseWidget_C.Setup");
 
 	UdialogueResponseWidget_C_Setup_Params params;
 	params.DialogueText = DialogueText;
 	params.responseID = responseID;
-	params.parentRef = parentRef;
+	params.ParentRef = ParentRef;
 	params.responseData = responseData;
 
 	auto flags = fn->FunctionFlags;

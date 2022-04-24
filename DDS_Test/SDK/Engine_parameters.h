@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -19490,6 +19490,23 @@ struct UProjectileMovementComponent_IsInterpolationComplete_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function Engine.RadialForceComponent.RemoveObjectTypeToAffect
+struct URadialForceComponent_RemoveObjectTypeToAffect_Params
+{
+	TEnumAsByte<EObjectTypeQuery>                      ObjectType;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.RadialForceComponent.FireImpulse
+struct URadialForceComponent_FireImpulse_Params
+{
+};
+
+// Function Engine.RadialForceComponent.AddObjectTypeToAffect
+struct URadialForceComponent_AddObjectTypeToAffect_Params
+{
+	TEnumAsByte<EObjectTypeQuery>                      ObjectType;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function Engine.RadialForceActor.ToggleForce
 struct ARadialForceActor_ToggleForce_Params
 {
@@ -19508,23 +19525,6 @@ struct ARadialForceActor_EnableForce_Params
 // Function Engine.RadialForceActor.DisableForce
 struct ARadialForceActor_DisableForce_Params
 {
-};
-
-// Function Engine.RadialForceComponent.RemoveObjectTypeToAffect
-struct URadialForceComponent_RemoveObjectTypeToAffect_Params
-{
-	TEnumAsByte<EObjectTypeQuery>                      ObjectType;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.RadialForceComponent.FireImpulse
-struct URadialForceComponent_FireImpulse_Params
-{
-};
-
-// Function Engine.RadialForceComponent.AddObjectTypeToAffect
-struct URadialForceComponent_AddObjectTypeToAffect_Params
-{
-	TEnumAsByte<EObjectTypeQuery>                      ObjectType;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Engine.RectLightComponent.SetSourceWidth
@@ -19566,6 +19566,26 @@ struct USceneCaptureComponentCube_CaptureScene_Params
 struct ASceneCaptureCube_OnInterpToggle_Params
 {
 	bool                                               bEnable;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.SkeletalMeshActor.OnRep_ReplicatedPhysAsset
+struct ASkeletalMeshActor_OnRep_ReplicatedPhysAsset_Params
+{
+};
+
+// Function Engine.SkeletalMeshActor.OnRep_ReplicatedMesh
+struct ASkeletalMeshActor_OnRep_ReplicatedMesh_Params
+{
+};
+
+// Function Engine.SkeletalMeshActor.OnRep_ReplicatedMaterial1
+struct ASkeletalMeshActor_OnRep_ReplicatedMaterial1_Params
+{
+};
+
+// Function Engine.SkeletalMeshActor.OnRep_ReplicatedMaterial0
+struct ASkeletalMeshActor_OnRep_ReplicatedMaterial0_Params
+{
 };
 
 // Function Engine.SkeletalMesh.SetLODSettings
@@ -19629,26 +19649,6 @@ struct USkeletalMesh_FindSocket_Params
 	class USkeletalMeshSocket*                         ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function Engine.SkeletalMeshActor.OnRep_ReplicatedPhysAsset
-struct ASkeletalMeshActor_OnRep_ReplicatedPhysAsset_Params
-{
-};
-
-// Function Engine.SkeletalMeshActor.OnRep_ReplicatedMesh
-struct ASkeletalMeshActor_OnRep_ReplicatedMesh_Params
-{
-};
-
-// Function Engine.SkeletalMeshActor.OnRep_ReplicatedMaterial1
-struct ASkeletalMeshActor_OnRep_ReplicatedMaterial1_Params
-{
-};
-
-// Function Engine.SkeletalMeshActor.OnRep_ReplicatedMaterial0
-struct ASkeletalMeshActor_OnRep_ReplicatedMaterial0_Params
-{
-};
-
 // Function Engine.SkeletalMeshSocket.InitializeSocketFromLocation
 struct USkeletalMeshSocket_InitializeSocketFromLocation_Params
 {
@@ -19662,11 +19662,6 @@ struct USkeletalMeshSocket_GetSocketLocation_Params
 {
 	class USkeletalMeshComponent*                      SkelComp;                                                 // (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Engine.SkyLight.OnRep_bEnabled
-struct ASkyLight_OnRep_bEnabled_Params
-{
 };
 
 // Function Engine.SkyLightComponent.SetVolumetricScatteringIntensity
@@ -19739,6 +19734,11 @@ struct USkyLightComponent_SetCubemap_Params
 
 // Function Engine.SkyLightComponent.RecaptureSky
 struct USkyLightComponent_RecaptureSky_Params
+{
+};
+
+// Function Engine.SkyLight.OnRep_bEnabled
+struct ASkyLight_OnRep_bEnabled_Params
 {
 };
 

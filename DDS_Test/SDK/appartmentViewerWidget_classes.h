@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: , Version: 1.1.0
+// Name: DDS, Version: 1.1.0.25
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -74,9 +74,9 @@ public:
 	void Setup(bool Owned, bool Forever, bool terminated, bool savePoint, bool Raided, const struct FText& AppartmentName, const struct FText& AppartmentDesc, const struct FText& Address, float Meterage, float Price, int Floors, int daysTillPayment, float Boost, class ArentAppartmentArea_C* ApartmentRef);
 	void openConfirmDialogue(class ArentAppartmentArea_C* Appartment, bool StartRenting);
 	void closeConfirmPanel();
-	void rentConfirmed(int DAYSLEFT, float Price);
+	void rentConfirmed(int DaysLeft, float Price);
 	void rentWentBad();
-	void rentTerminated(int DAYSLEFT);
+	void rentTerminated(int DaysLeft);
 	void ExecuteUbergraph_appartmentViewerWidget(int EntryPoint);
 };
 
